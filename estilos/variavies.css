@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --cor-contraste: #474747;
+    --cor-contraste-blur: #f9f9f739;
+    --cor-semi-preto: #DBDFD0;
+    --cor-semi-semi-preto: #9c9e95;
+    --cor-contraste-do-contraste: white;
+    --cor-destaque: #AD343E;
+    --cor-destaque-claro: #ad343e98;
+    --semi-transparente: rgba(255, 255, 255, 0.593);
+
+    --fonte-padrao:Arial, Helvetica, sans-serif;
+    --fonte-header: "Playfair Display", serif;
+}
+
+body {
+    font-family: var(--fonte-padrao);
+}
+
+h1, h2 {
+    font-family: var(--fonte-header);
+}
