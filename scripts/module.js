@@ -1,3 +1,5 @@
+const MAX_WIDTH_WITH_HAMBURGUER = 1268;
+
 class HamburguerButton {
     constructor(menu) {
         this.menu = document.querySelector(menu)
@@ -21,7 +23,7 @@ function openIdentify(hamburguer) {
     const hamburgerButton = new HamburguerButton('nav ul');
 
     hamburguer_button.addEventListener('click', (e) => {
-        hamburgerButton.open();
+        if(window.innerWidth < MAX_WIDTH_WITH_HAMBURGUER) hamburgerButton.open();
     })
 
     window.addEventListener('resize', () => {
@@ -38,12 +40,12 @@ function closeIdentify(closeButton) {
     const menu = document.querySelector('nav ul')
 
     close_button.addEventListener('click', () => {
-        hamburgerButton.close();
+        if(window.innerWidth < MAX_WIDTH_WITH_HAMBURGUER) hamburgerButton.close();
     })
 
     document.addEventListener('click', (e) => {
         if(e.target != menu && !hamburguer_button.contains(e.target)) {
-            hamburgerButton.close();
+            if(window.innerWidth < MAX_WIDTH_WITH_HAMBURGUER) hamburgerButton.close();
         }
     })
 } 
