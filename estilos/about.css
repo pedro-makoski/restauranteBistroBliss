@@ -1,0 +1,83 @@
+#about {
+    padding: 50px;
+    background-color: var(--cor-diferenciado-branco);
+}
+
+#about > div{
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    gap:200px;
+}
+
+.contact-with-image {
+    width: fit-content;
+    height: fit-content;
+    position: relative;
+    padding-bottom: 50px;
+}
+
+#about img {
+    width: 500px;
+    height: 500px;
+    border-radius: 10px;
+}
+
+div.contact-us {
+    position: absolute;
+    left: 200px;
+    top: 290px;
+    background-color: var(--cor-contraste);
+    width: 411px;
+    color: white;
+    padding: 50px;
+    border-radius: 10px;    
+}
+
+div.contact-us h2 {
+    font-family: var(--fonte-padrao);
+    margin-bottom: 20px;
+}
+
+div.contact-us > div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; 
+}
+
+div.contact-us > div > div {
+    display: flex;
+    gap: 20px;   
+}
+
+div.contact-us > div > div > div p{
+    font-weight: light;
+}
+
+#about .we-provide {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#about .we-provide h2{
+    font-weight: lighter;
+    font-size: 55px;
+}
+
+.button-about {
+    width: fit-content;
+    text-decoration: none;
+    text-align: center;
+    font-size: 0.8em;
+    color: var(--cor-contraste);
+    padding: 15px 20px;
+    border: 2px solid var(--cor-contraste);
+    border-radius: 50px;
+    font-weight: bold;
+}
+
+.button-about:hover {
+    background-color: var(--cor-cinza);
+}

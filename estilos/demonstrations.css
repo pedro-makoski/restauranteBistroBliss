@@ -1,0 +1,9 @@
+#more-about-us {
+    background-color: var(--cor-diferenciado-branco);
+    padding: 50px;
+}
+
+#more-about-us > div {
+    margin: auto;
+    max-width: 1200px;
+}

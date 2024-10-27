@@ -1,0 +1,37 @@
+#services {
+    padding: 50px;
+}
+
+.services {
+    max-width: 1200px;
+    margin: auto;
+}
+
+#services h2{ 
+    font-size:55px;
+    font-weight: lighter;
+    width: 600px;
+    margin-bottom: 50px;
+}
+
+#services div > div:has(article) {
+    display: flex;
+    gap: 20px;
+}
+
+#services article {
+    width: 306px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#services article img {
+    width: 306px;
+    height: 320px;
+    border-radius: 20px;
+}
+
+#services article p {
+    font-weight: light;
+}
