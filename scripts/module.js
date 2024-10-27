@@ -29,6 +29,8 @@ function openIdentify(hamburguer) {
     window.addEventListener('resize', () => {
         if(window.innerWidth >= 1164) {
             hamburgerButton.open();
+        } else {
+            hamburgerButton.close();
         }
     })
 }

@@ -110,7 +110,7 @@ nav ul a, .exit button{
     border-radius: 50px;
 }
 
-.exit button:hover, .exti button:focus {
+.exit button:hover, .exit button:focus {
     background-color: var(--cor-destaque);
     color: white;
 }
@@ -157,7 +157,7 @@ nav .book:hover, nav .book:focus{
     gap: 15px;
     background-color: var(--semi-transparente);
     border-radius: 10px;
-    padding: 15px;
+    padding: 100px;
 }
 
 .header_main h2 {
