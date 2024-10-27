@@ -11,6 +11,11 @@ div:has(nav) {
     padding: 10px 100px;
 }
 
+nav {
+    padding: 10px 0;
+    max-width: 1296px;
+}
+
 .logo a, .logo{
     font-size: 1.2em;
 }

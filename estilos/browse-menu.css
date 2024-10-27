@@ -13,7 +13,7 @@
     margin: auto;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-around;
     max-width: 1296px;
     gap: 20px;
 }

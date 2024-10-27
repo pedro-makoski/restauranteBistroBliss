@@ -41,7 +41,6 @@ div:has(#contact){
 nav {
     padding: 10px;
     margin: auto;
-    max-width: 1296px;
     display: flex;
     justify-content: space-between;
     align-items: center;
