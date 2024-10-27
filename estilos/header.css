@@ -16,8 +16,25 @@ div:has(nav) {
 }
 
 nav ul {
+    display: block;
+    border: none;
+    position: static;
+    left: 0;
+    right: 0;
+    transform: translate(0, 0);
+    background-color: transparent;
     display: flex;
+    flex-direction: row;
     gap: 10px;
+}
+
+.exit, .hamburguer{
+    display: none;
+}
+
+nav ul a {
+    padding: 7px;
+    width: 77px;
 }
 
 .header_main {

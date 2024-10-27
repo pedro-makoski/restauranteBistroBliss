@@ -1,7 +1,7 @@
 div:has(#contact){
     background-color: var(--cor-contraste);
     width: 100%;
-    padding: 10px;
+    padding: 20px;
 }
 
 #contact {
@@ -57,18 +57,63 @@ nav {
 }
 
 nav ul {
+    display: none;
+    flex-direction: column;
+    border: 0.5px solid black;
+    border-radius: 10px;
+    background-color: var(--cor-contraste-do-contraste);
+    padding: 20px;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
     list-style-type: none;
 }
 
-nav ul a {
+.hamburguer {
+    border:none;
+    color: transparent;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.hamburguer:hover {
+    background-color: var(--cor-contraste);
+}
+
+.hamburguer span{
+    display: block;
+    background-color: var(--cor-contraste);
+    width: 20px;
+    height: 2px;
+}
+
+.hamburguer:hover span {
+    background-color: var(--cor-contraste-do-contraste);
+}
+
+.exit button{
+    border: none;
+    background-color: transparent;
+}
+
+nav ul a, .exit button{
+    width: 70vw;
     text-decoration: none;
-    width: 77px;
     text-align: center;
     color: var(--cor-contraste);
     display: block;
     font-weight: 500;
-    padding: 7px;
+    padding: 20px;
     border-radius: 50px;
+}
+
+.exit button:hover, .exti button:focus {
+    background-color: var(--cor-destaque);
+    color: white;
 }
 
 nav ul a:hover, nav ul a:focus{
