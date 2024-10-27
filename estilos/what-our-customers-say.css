@@ -1,0 +1,45 @@
+#what-they-say {
+    padding: 50px;
+}
+
+#what-they-say > div{
+    max-width: 1296px;
+    margin: auto;
+}
+
+#what-they-say h2 {
+    font-size: 55px;
+    font-weight: lighter;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.coments {
+    width: 100%;
+    display: flex;  
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+#what-they-say article {
+    width: 416px;
+    background-color: var(--cor-diferenciado-branco);
+    padding: 40px;
+    border-radius: 20px;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#what-they-say article h3 {
+    font-size: 1.5em;
+    color: var(--cor-destaque);
+}
+
+#what-they-say article aside {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}

@@ -4,10 +4,9 @@
 }
 
 #about > div{
-    max-width: 1200px;
+    max-width: 1296px;
     margin: auto;
     display: flex;
-    gap:200px;
 }
 
 .contact-with-image {
@@ -15,6 +14,7 @@
     height: fit-content;
     position: relative;
     padding-bottom: 50px;
+    margin-right: 200px;
 }
 
 #about img {
@@ -64,6 +64,11 @@ div.contact-us > div > div > div p{
 #about .we-provide h2{
     font-weight: lighter;
     font-size: 55px;
+}
+
+#about .we-provide strong {
+    font-size: 18px;
+    font-weight: 500;
 }
 
 .button-about {

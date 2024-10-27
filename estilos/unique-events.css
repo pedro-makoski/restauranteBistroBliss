@@ -1,10 +1,10 @@
 #services {
-    padding: 50px;
+    padding: 50px 20px;
 }
 
 .services {
-    max-width: 1200px;
     margin: auto;
+    max-width: 1296px;
 }
 
 #services h2{ 
@@ -16,6 +16,8 @@
 
 #services div > div:has(article) {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 20px;
 }
 
@@ -23,13 +25,17 @@
     width: 306px;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 20px;
 }
 
 #services article img {
     width: 306px;
     height: 320px;
     border-radius: 20px;
+}
+
+#services article h3 {
+    font-size: 1.5em;
 }
 
 #services article p {

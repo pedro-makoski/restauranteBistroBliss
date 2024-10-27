@@ -1,0 +1,159 @@
+div:has(#contact){
+    background-color: var(--cor-contraste);
+    width: 100%;
+    padding: 10px;
+}
+
+#contact {
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+#contact .informations {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 0.9em;
+}
+
+#contact .social a:has(svg):hover {
+    background-color: var(--cor-semi-semi-preto);
+}
+
+#contact .informations div, #contact .social{
+    display: flex;
+    gap: 10px;
+    color: var(--cor-contraste-do-contraste);
+    align-items: center;
+}
+
+#contact .social a:has(svg){
+    background-color: var(--cor-contraste-blur);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+nav {
+    padding: 10px;
+    margin: auto;
+    max-width: 1296px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a, .logo{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: var(--cor-contraste);
+    font-size: 1.05em;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul a {
+    text-decoration: none;
+    width: 77px;
+    text-align: center;
+    color: var(--cor-contraste);
+    display: block;
+    font-weight: 500;
+    padding: 7px;
+    border-radius: 50px;
+}
+
+nav ul a:hover, nav ul a:focus{
+    background-color: var(--cor-semi-preto);
+}
+
+nav ul a.actual {
+    background-color: var(--cor-semi-preto);
+}
+
+nav .book{
+    text-decoration: none;
+    text-align: center;
+    font-size: 0.8em;
+    color: var(--cor-contraste);
+    padding: 15px;
+    border: 2px solid var(--cor-contraste);
+    border-radius: 50px;
+    font-weight: bold;
+}
+
+nav .book:hover, nav .book:focus{
+    background-color: var(--cor-semi-preto);
+}
+
+.header_main {
+    background-color: var(--cor-contraste);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.216), rgba(0, 0, 0, 0.101)), url('../imgs/imagem_header.png');
+    text-align: center; 
+}
+
+.header_main > div {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 15px;
+    background-color: var(--semi-transparente);
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.header_main h2 {
+    font-size: 3em;
+    font-weight: 200;
+}
+
+.header_main p {
+    font-size: 1.2em;
+}
+
+.buttons_main {
+    display: flex;
+    flex-wrap: wrap;
+    gap:20px;
+    justify-content: center;
+}
+
+.buttons_main a{
+    text-decoration: none;
+    color: var(--cor-contraste);
+    display: block;
+    padding: 20px;
+    font-weight: bold;
+    border-radius: 50px;
+}
+
+.buttons_main a.destaque_button_book {
+    background-color: var(--cor-destaque);
+    color: white;
+}
+
+.buttons_main a.destaque_button_book:hover, .buttons_main a.destaque_button_book:focus{
+    background-color: var(--cor-destaque-claro);
+}
+
+.buttons_main a.menu_button {
+    border: 2px solid var(--cor-contraste);
+}
+
+.buttons_main a.menu_button:hover {
+    background-color: var(--semi-transparente);
+}

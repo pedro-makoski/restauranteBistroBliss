@@ -14,10 +14,10 @@
     --cor-contraste-do-contraste: white;
     --cor-destaque: #AD343E;
     --cor-destaque-claro: #ad343e98;
-    --semi-transparente: rgba(255, 255, 255, 0.593);
     --cor-cinza: #f1f1f1;
     --cor-diferenciacao: rgba(230, 230, 230, 0.341);
     --cor-diferenciado-branco: #F9F9F7;
+    --semi-transparente: rgba(255, 255, 255, 0.474);
 
     --fonte-padrao: "DM Sans", sans-serif;
     --fonte-header: "Playfair Display", serif;
