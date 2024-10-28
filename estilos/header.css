@@ -54,3 +54,7 @@ nav ul a {
 .header_main h2 {
     font-size: 5em;
 }
+
+.buttons_main a {
+    width: auto;
+}
