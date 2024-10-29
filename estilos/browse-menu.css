@@ -4,7 +4,8 @@
 
 #menu div:has(article) {
     margin: auto;
-    gap: 10px;
+    padding: 0 10px;
+    gap: 20px;
     flex-wrap: wrap;
     max-width: 1296px;
 }              

@@ -18,9 +18,9 @@ class HamburguerButton {
     }
 }
 
-function openIdentify(hamburguer) {
-    const hamburguer_button = document.querySelector(hamburguer);
-    const hamburgerButton = new HamburguerButton('nav ul');
+function openIdentify(hamburguer, local) {
+    const hamburguer_button = document.querySelector(hamburguer, local);
+    const hamburgerButton = new HamburguerButton(local);
 
     hamburguer_button.addEventListener('click', (e) => {
         if(window.innerWidth < MAX_WIDTH_WITH_HAMBURGUER) hamburgerButton.open();
@@ -35,11 +35,11 @@ function openIdentify(hamburguer) {
     })
 }
 
-function closeIdentify(closeButton) {
-    const hamburguer_button = document.querySelector('.hamburguer');
+function closeIdentify(closeButton, button, local) {
+    const hamburguer_button = document.querySelector(button);
     const close_button = document.querySelector(closeButton);
-    const hamburgerButton = new HamburguerButton('nav ul');
-    const menu = document.querySelector('nav ul')
+    const hamburgerButton = new HamburguerButton(local);
+    const menu = document.querySelector(local)
 
     close_button.addEventListener('click', () => {
         if(window.innerWidth < MAX_WIDTH_WITH_HAMBURGUER) hamburgerButton.close();
@@ -51,3 +51,39 @@ function closeIdentify(closeButton) {
         }
     })
 } 
+
+class ScrollFunctions {
+    constructor(scroll_container, scroll_width) {
+        this.scroll_container = document.querySelector(scroll_container);
+        this.scroll_width = scroll_width;
+        this.length = this.scroll_container.children.length
+        this.scroll_size = this.length*this.scroll_width
+    }
+
+    scroll_left() {
+        this.scroll_container.scrollBy(this.scroll_width, 0);
+    }
+
+    show_status() {
+        return Math.round((this.scroll_container.scrollLeft/this.scroll_width)+1); 
+    }
+
+    demonstrate_status(place, color, noncolor) {
+        let pos = this.show_status()-1;
+        this.place_satus = document.querySelector(place);
+        this.place_satus_childrens = this.place_satus.children; 
+        this.place_satus_childrens[pos].style.backgroundColor = color;
+
+        for(let i = 0; i < this.place_satus_childrens.length; i++) {
+            if(i != pos) {
+                this.place_satus_childrens[i].style.backgroundColor = noncolor;
+            }
+        } 
+    }
+}
+
+function demonstrate_scroll(element, width, guide, maincolor, othercolor) {
+    console.log(maincolor, othercolor)
+    const scrollFunctions = new ScrollFunctions(element, width);
+    scrollFunctions.demonstrate_status(guide, maincolor, othercolor);
+}
