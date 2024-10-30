@@ -80,6 +80,10 @@ class ScrollFunctions {
             }
         } 
     }
+
+    IdentifyWhereYouWantToGo() {
+        return Math.round((this.scroll_container.scrollLeft/this.scroll_width)+1)*this.scroll_width; 
+    }
 }
 
 function demonstrate_scroll(element, width, guide, maincolor, othercolor) {

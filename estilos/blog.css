@@ -75,3 +75,9 @@
     flex-direction: column;
     gap: 20px;
 }
+
+@media screen and (max-width: 1269px) {
+    .blog-destaque {
+        grid-column-end: 1;
+    }
+}

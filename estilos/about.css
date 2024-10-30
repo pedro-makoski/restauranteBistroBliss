@@ -4,8 +4,14 @@
 }
 
 #about > div{
-    max-width: 1296px;
     margin: auto;
+    max-width: 1296px;
+    display: flex;
+    justify-content: center;
+}
+
+#about > div > div {
+    width: fit-content;
     display: flex;
 }
 
@@ -14,7 +20,7 @@
     height: fit-content;
     position: relative;
     padding-bottom: 50px;
-    margin-right: 200px;
+    margin-right: 150px;
 }
 
 #about img {
@@ -85,4 +91,36 @@ div.contact-us > div > div > div p{
 
 .button-about:hover {
     background-color: var(--cor-cinza);
+}
+
+@media screen and (max-width: 1269px){
+    #about > div > div {
+        margin: 0;
+        flex-direction: column;
+    }
+
+    .contact-with-image {
+        display: flex;
+        gap: 10px;
+        margin: 0;
+    }
+
+    #about .we-provide {
+        width: fit-content;
+    }
+
+    #about img {
+        width: 100%;
+    }
+
+    div.contact-us {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        position: static;
+        left: 0;
+        right: 0;
+        transform: translate(0, 0);
+    } 
 }

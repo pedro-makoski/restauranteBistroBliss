@@ -1,4 +1,4 @@
-const [menuguide, scrollmenu, width, backstrong, backnotstrong] = ['.menu-guide', '.scroll_menu', window.innerWidth, '#000', '#fff'];
+const [menuguide, scrollmenu, width, backstrong, backnotstrong] = ['.menu-guide', '.scroll_menu', window.innerWidth, 'var(--cor-contraste)', 'var(--cor-contraste-do-contraste)'];
 
 demonstrate_scroll(scrollmenu, width, menuguide, backstrong, backnotstrong)
 
