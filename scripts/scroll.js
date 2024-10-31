@@ -1,9 +1,14 @@
 const [menuguide, scrollmenu, width, backstrong, backnotstrong] = ['.menu-guide', '.scroll_menu', window.innerWidth, 'var(--cor-contraste)', 'var(--cor-contraste-do-contraste)'];
 
-demonstrate_scroll(scrollmenu, width, menuguide, backstrong, backnotstrong)
+let before = demonstrate_scroll(scrollmenu, width, menuguide, backstrong, backnotstrong, 0);
 
 const elemento = document.querySelector(scrollmenu);
 
+let timer;
+
 elemento.addEventListener('scroll', () => {
-    demonstrate_scroll(scrollmenu, width, menuguide, backstrong, backnotstrong)
+    clearTimeout(timer);
+    timer = setTimeout(() => {
+        before = demonstrate_scroll(scrollmenu, width, menuguide, backstrong, backnotstrong, before);
+    }, 50)
 })

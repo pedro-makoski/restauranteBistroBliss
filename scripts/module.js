@@ -65,7 +65,7 @@ class ScrollFunctions {
     }
 
     show_status() {
-        return Math.round((this.scroll_container.scrollLeft/this.scroll_width)+1); 
+        return Math.round(((this.scroll_container.scrollLeft+this.scroll_width)/this.scroll_width)); 
     }
 
     demonstrate_status(place, color, noncolor) {
@@ -81,13 +81,21 @@ class ScrollFunctions {
         } 
     }
 
-    IdentifyWhereYouWantToGo() {
-        return Math.round((this.scroll_container.scrollLeft/this.scroll_width)+1)*this.scroll_width; 
+    goToNew(before_scroll) {
+        if(this.scroll_container.scrollLeft != before_scroll) {
+            this.scroll_container.scrollTo(
+                {
+                    left: (this.show_status()-1)*this.scroll_width,
+                    behavior: "smooth"
+                }
+            )
+        } 
     }
 }
 
-function demonstrate_scroll(element, width, guide, maincolor, othercolor) {
-    console.log(maincolor, othercolor)
+function demonstrate_scroll(element, width, guide, maincolor, othercolor, before) {
     const scrollFunctions = new ScrollFunctions(element, width);
     scrollFunctions.demonstrate_status(guide, maincolor, othercolor);
+    scrollFunctions.goToNew(before);
+    return scrollFunctions.scroll_container.scrollLeft;
 }
