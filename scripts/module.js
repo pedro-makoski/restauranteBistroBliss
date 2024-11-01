@@ -1,4 +1,4 @@
-const MAX_WIDTH_WITH_HAMBURGUER = 1268;
+const MAX_WIDTH_WITH_HAMBURGUER = 1040;
 
 class HamburguerButton {
     constructor(menu) {
@@ -27,7 +27,7 @@ function openIdentify(hamburguer, local) {
     })
 
     window.addEventListener('resize', () => {
-        if(window.innerWidth >= 1164) {
+        if(window.innerWidth >= MAX_WIDTH_WITH_HAMBURGUER) {
             hamburgerButton.open();
         } else {
             hamburgerButton.close();
@@ -91,11 +91,25 @@ class ScrollFunctions {
             )
         } 
     }
+
+    goTo(pos) {
+        this.scroll_container.scrollTo(
+            {
+                left: (pos-1)*this.scroll_width,
+                behavior: "smooth"
+            }
+        ) 
+    }
 }
 
 function demonstrate_scroll(element, width, guide, maincolor, othercolor, before) {
     const scrollFunctions = new ScrollFunctions(element, width);
     scrollFunctions.demonstrate_status(guide, maincolor, othercolor);
     scrollFunctions.goToNew(before);
-    return scrollFunctions.scroll_container.scrollLeft;
+    return [scrollFunctions.scroll_container.scrollLeft, scrollFunctions.show_status()];
+}
+
+function goToActualPos(element, width, pos) {
+    const scrollFunctions = new ScrollFunctions(element, width);
+    scrollFunctions.goTo(pos)
 }

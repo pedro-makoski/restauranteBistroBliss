@@ -3,13 +3,13 @@
     background-color: var(--cor-diferenciado-branco);
 }
 
-#blog > div {
+#blog > div {   
     max-width: 1296px;
     margin: auto;
 }
 
 #blog img {
-    height: 60%;
+    height: 50%;
     object-fit: cover;
     width: 100%;
 }
