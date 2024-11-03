@@ -81,17 +81,6 @@ class ScrollFunctions {
         } 
     }
 
-    goToNew(before_scroll) {
-        if(this.scroll_container.scrollLeft != before_scroll) {
-            this.scroll_container.scrollTo(
-                {
-                    left: (this.show_status()-1)*this.scroll_width,
-                    behavior: "smooth"
-                }
-            )
-        } 
-    }
-
     goTo(pos) {
         this.scroll_container.scrollTo(
             {
@@ -99,6 +88,12 @@ class ScrollFunctions {
                 behavior: "smooth"
             }
         ) 
+    }
+
+    goToNew(before_scroll) {
+        if(this.scroll_container.scrollLeft != before_scroll) {
+            this.goTo(this.show_status())
+        } 
     }
 }
 
@@ -112,4 +107,11 @@ function demonstrate_scroll(element, width, guide, maincolor, othercolor, before
 function goToActualPos(element, width, pos) {
     const scrollFunctions = new ScrollFunctions(element, width);
     scrollFunctions.goTo(pos)
+    if(pos == 1) {
+        return -1;
+    } else if(pos > scrollFunctions.length-1) {
+        return 1;
+    } else {
+        return 0; 
+    }
 }

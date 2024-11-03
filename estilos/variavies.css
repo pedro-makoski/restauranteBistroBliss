@@ -30,3 +30,34 @@ body {
 h1, h2 {
     font-family: var(--fonte-header);
 }
+
+.button-move-scroll button{
+    background-color: transparent;
+    border: 2px solid var(--cor-destaque);
+    border-radius: 50px;
+    padding: 10px;
+}
+
+div:has(.button-move-scroll), section:has(.button-move-scroll) {
+    position: relative;
+}
+
+.button-move-scroll {
+    position: absolute;
+}
+
+.button-move-scroll:has(.toleft) {
+    top: 50%;
+    transform: translateY(-50%);
+    left: 5%;
+}
+
+.button-move-scroll:has(.toright) {
+    right: 5%;
+    transform: translateY(-50%);
+    top: 50%;
+}
+
+.button-move-scroll button:hover {
+    background-color: var(--cor-semi-preto);
+}
