@@ -27,3 +27,11 @@
 .guide-balls {
     display: none;
 }
+
+.button-move-scroll {
+    display: none;
+}
+
+div:has(.button-move-scroll):hover .button-move-scroll, section:has(.button-move-scroll):hover .button-move-scroll {
+    display: none;
+}

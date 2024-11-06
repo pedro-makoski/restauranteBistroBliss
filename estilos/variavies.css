@@ -44,16 +44,24 @@ div:has(.button-move-scroll), section:has(.button-move-scroll) {
 
 .button-move-scroll {
     position: absolute;
+    display: none;
 }
+
+div:has(.button-move-scroll):hover .button-move-scroll, section:has(.button-move-scroll):hover .button-move-scroll {
+    display: block;
+}
+
 
 .button-move-scroll:has(.toleft) {
     top: 50%;
+    margin-left: 5%;
     transform: translateY(-50%);
-    left: 5%;
+    left: 0%;
 }
 
 .button-move-scroll:has(.toright) {
-    right: 5%;
+    right: 0%;
+    margin-right: 5%;
     transform: translateY(-50%);
     top: 50%;
 }
