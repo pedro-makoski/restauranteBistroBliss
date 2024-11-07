@@ -94,14 +94,18 @@ class ScrollFunctions {
         if(this.scroll_container.scrollLeft != before_scroll) {
             this.goTo(this.show_status())
         } 
+
     }
 }
 
 function demonstrate_scroll(element, width, guide, maincolor, othercolor, before) {
+
     const scrollFunctions = new ScrollFunctions(element, width);
     scrollFunctions.demonstrate_status(guide, maincolor, othercolor);
+
     scrollFunctions.goToNew(before);
-    return [scrollFunctions.scroll_container.scrollLeft, scrollFunctions.show_status()];
+
+    return [scrollFunctions.scroll_container.scrollLeft, scrollFunctions.show_status(), change];
 }
 
 function goToActualPos(element, width, pos) {
@@ -109,9 +113,26 @@ function goToActualPos(element, width, pos) {
     scrollFunctions.goTo(pos)
     if(pos == 1) {
         return -1;
-    } else if(pos > scrollFunctions.length-1) {
+    } else if(pos >= scrollFunctions.length) {
         return 1;
     } else {
         return 0; 
     }
+}
+
+function see_arrows(element, width) {
+    const scrollFunctions = new ScrollFunctions(element, width);
+
+    let position = scrollFunctions.show_status();
+    let change;
+
+    if(position == 1) {
+        change = -1;
+    } else if(position == scrollFunctions.length) {
+        change = 1;
+    } else {    
+        change = 0; 
+    }
+
+    return change;
 }
