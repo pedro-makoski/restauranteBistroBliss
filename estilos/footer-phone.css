@@ -43,11 +43,15 @@ footer .social a:has(svg):hover {
 
 footer .logo {
     color: var(--cor-contraste-do-contraste);
+    display: flex;
+    align-items: center;
 }
 
 footer .logo h2 {
+    width: var(--cem-width);
     font-family: var(--fonte-header);
     font-style: italic;
+    margin-bottom: 0;
 }
 
 footer .about-foot {

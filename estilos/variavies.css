@@ -33,7 +33,7 @@
     --height-2: 600px;
     --mid-width-screen: 50vw;
     --width-blog: 400px;
-    --height-3: 2000px;
+    --height-3: 800px;
     --width-menu-item: 300px;
     --width-1: 103px;
     --height-4: 101px;
@@ -203,4 +203,10 @@ div:has(.button-move-scroll):hover .button-move-scroll, section:has(.button-move
 
 .button-move-scroll button:hover {
     background-color: var(--cor-semi-preto);
+}
+
+@media screen and (max-width: 1296px){
+    :root{
+        --height-3: 1500px;
+    }
 }
