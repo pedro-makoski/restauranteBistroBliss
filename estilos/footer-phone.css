@@ -1,0 +1,108 @@
+footer {
+    background-color: var(--cor-contraste);
+    color: var(--cor-contraste-do-contraste);
+    padding: var(--padding-section-pc);
+    font-weight: var(--title-weight);
+}
+
+footer > div {
+    max-width: var(--width-size-max);
+    margin: auto;
+}
+
+footer > div > div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gap-13);
+}
+
+footer h2 {
+    font-family: var(--fonte-padrao);
+    margin-bottom: var(--margin-11);
+}
+
+footer .informations div, footer .social{
+    display: flex;
+    gap: var(--gap-14);
+    align-items: center;
+}
+
+footer .social a:has(svg){
+    background-color: var(--cor-destaque);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: var(--width-bullet-ball);
+    height: var(--height-bullet-ball);
+    border-radius: var(--full-radius);
+}
+
+footer .social a:has(svg):hover {
+    background-color: var(--cor-destaque-claro);
+}
+
+footer .logo {
+    color: var(--cor-contraste-do-contraste);
+}
+
+footer .logo h2 {
+    font-family: var(--fonte-header);
+    font-style: italic;
+}
+
+footer .about-foot {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-15);
+}
+
+footer ul {
+    margin-top: var(--margin-12);
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-16);
+}
+
+footer a {
+    color: var(--cor-contraste-do-contraste);
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer .imagens-footer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gap-17);
+}
+
+.imagem-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: var(--width-img-footer);
+    height: var(--height-img-footer);
+    overflow: hidden;
+    border-radius: var(--border-radius-1);
+    transition: .2s;
+}
+
+footer img {
+    transition: .2s;
+    object-fit: cover;
+    width: var(--major-width-container-img-footer);
+    height: var(--major-height-container-img-footer);
+}
+
+footer img:hover {
+    width: calc(var(--major-width-container-img-footer) + 50px);
+    height: calc(var(--major-height-container-img-footer) + 50px);
+}
+
+footer > div > p {
+    text-align: center;
+    margin-top: var(--margin-13);
+}

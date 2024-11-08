@@ -1,16 +1,16 @@
 #menu {
-    padding: 50px 0;
+    padding: var(--padding-section-pc) 0;
     text-align: center;
 }
 
 #menu h2 {
-    font-size: 40px;
+    font-size: var(--h2-size-phone);
     font-weight: lighter;
-    margin-bottom: 20px;
+    margin-bottom: var(--margin-6);
 }
 
 #menu div:has(article) {
-    width: 100vw;
+    width: var(--full-screen-width);
     display: flex;
     overflow-y: scroll;
     justify-content: space-around;
@@ -22,18 +22,18 @@
 
 #menu div article {
     flex-shrink: 0;
-    width: 300px;
-    margin: 0 calc(50vw - 150px);
+    width: var(--width-menu-item);
+    margin: 0 calc(var(--mid-width-screen) - var(--width-menu-item)/2);
 }
 
 #menu a {
-    width: 300px;
-    border: 1px solid var(--cor-contraste);
-    padding: 20px;
-    border-radius: 10px;
+    max-width: var(--width-menu-item);
+    border: var(--border-width-2) solid var(--cor-contraste);
+    padding: var(--padding-4);
+    border-radius: var(--border-radius-1);
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: var(--gap-6);
     align-items: center;
     text-decoration: none;
     color: var(--cor-contraste);
@@ -54,26 +54,26 @@
 
 #menu article div:has(svg) {
     background-color: var(--cor-cinza);   
-    width: 103px;
-    height: 101px;
+    width: var(--width-1);
+    height: var(--height-4);
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 50%;
+    border-radius: var(--full-radius);
 }
 
 .guide-balls {
     display: flex;
     width: fit-content;
-    margin: 30px auto;
-    gap: 10px;
+    margin: var(--margin-7) auto;
+    gap: var(--gap-8);
 }
 
 .guide-balls span{
     display: block;
-    width: 20px;
-    height: 20px;
+    width: var(--width-guide-ball);
+    height: var(--height-guide-ball);
     background-color: var(--cor-contraste-do-contraste);
-    border: 1px solid var(--cor-contraste);
-    border-radius: 50px;
+    border: var(--border-width-2) solid var(--cor-contraste);
+    border-radius: var(--full-radius);
 }

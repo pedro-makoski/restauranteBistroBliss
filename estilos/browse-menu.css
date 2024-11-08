@@ -1,23 +1,23 @@
 #menu h2 {
-    font-size: 55px;
+    font-size: var(--h2-size-pc);
 }
 
 #menu div:has(article) {
     margin: auto;
-    padding: 0 10px;
-    gap: 20px;
+    padding: 0 var(--padding-5);
+    gap: var(--gap-9);
     flex-wrap: wrap;
-    max-width: 1296px;
+    max-width: var(--width-size-max);
 }              
 
 #menu article div:has(svg) {
     background-color: var(--cor-cinza);   
-    width: 103px;
-    height: 101px;
+    width: var(--width-1);
+    height: var(--height-4);
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 50%;
+    border-radius: var(--full-radius);
 }
 
 #menu div article {

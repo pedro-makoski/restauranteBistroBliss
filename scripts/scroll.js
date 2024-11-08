@@ -1,61 +1,86 @@
-let [menuguide, scrollmenu, backstrong, backnotstrong, pos] = ['.menu-guide', '.scroll_menu', 'var(--cor-contraste)', 'var(--cor-contraste-do-contraste)', 1];
-const elemento = document.querySelector(scrollmenu);
+let [menuguidelocal, scrolls, backstrong, backnotstrong] = ['.guide-balls', '.scroll', 'var(--cor-contraste)', 'var(--cor-contraste-do-contraste)'];
 
-let change;
+const configs = []
 
-let width = elemento.getBoundingClientRect().width;
+const elementos = Array.from(document.querySelectorAll(scrolls));
 
-let before; 
+for(let i = 0; i < elementos.length; i++) {
+    if(typeof configs[i] != undefined) {   
+        configs[i] = {
+            "width":elementos[i].getBoundingClientRect().width,
+            "before": 0,
+            "pos": 1
+        };
+    }
 
-const button_left = document.querySelector('.button-move-scroll .toleft');
-const button_right = document.querySelector('.button-move-scroll .toright');
+    const pai = elementos[i].parentElement;
+    let menuguide = pai.querySelector(menuguidelocal);
+    let change;
 
-[before, pos, change] = demonstrate_scroll(scrollmenu, width, menuguide, backstrong, backnotstrong, pos);
+    configs[i]["width"] = elementos[i].getBoundingClientRect().width;
 
-let timer;
+    const button_left = pai.querySelector('.button-move-scroll .toleft');
+    const button_right = pai.querySelector('.button-move-scroll .toright');
 
-window.addEventListener('resize', () => {
-    width = elemento.getBoundingClientRect().width;
-    goToActualPos(scrollmenu, width, pos);
-});
+    [configs[i]["before"], configs[i]["pos"], change] = demonstrate_scroll(elementos[i], configs[i]["width"], menuguide, backstrong, backnotstrong, configs[i]["pos"]);
 
-elemento.addEventListener('scroll', () => {
-    clearTimeout(timer);
-    timer = setTimeout(() => {
-        [before, pos] = demonstrate_scroll(scrollmenu, width, menuguide, backstrong, backnotstrong, before);
+    let timer;
+
+    window.addEventListener('resize', () => {
+        configs[i]["width"] = elementos[i].getBoundingClientRect().width;
+        if(window.innerWidth > MAX_WIDTH_WITH_HAMBURGUER) {
+            change = goToActualPos(elementos[i], configs[i]["width"], 0);
+        } else {
+            change = goToActualPos(elementos[i], configs[i]["width"], configs[i]["pos"]);
+        }
+
+        if(change === -1) {
+            button_left.style.display = 'none';
+        } else if(change === 1) {
+            button_right.style.display = 'none';
+        } else {
+            button_right.style.display = 'block';
+            button_left.style.display = 'block';
+        }
+    });
+
+    elementos[i].addEventListener('scroll', () => {
+        clearTimeout(timer);
+        timer = setTimeout(() => {
+            [configs[i]["before"], configs[i]["pos"]] = demonstrate_scroll(elementos[i], configs[i]["width"], menuguide, backstrong, backnotstrong, configs[i]["pos"]);
+        }, 50)
         
-    }, 50)
-    
-    change = see_arrows(scrollmenu, width);
-    
-    if(change === -1) {
-        button_left.style.display = 'none';
-    } else if(change === 1) {
-        button_right.style.display = 'none';
-    } else {
-        button_right.style.display = 'block';
-        button_left.style.display = 'block';
-    }
-});
+        change = see_arrows(elementos[i], configs[i]["width"]);
+        
+        if(change === -1) {
+            button_left.style.display = 'none';
+        } else if(change === 1) {
+            button_right.style.display = 'none';
+        } else {
+            button_right.style.display = 'block';
+            button_left.style.display = 'block';
+        }
+    });
 
-button_left.style.display = 'none';
+    button_left.style.display = 'none';
 
-button_right.addEventListener('click', () => {
-    change = goToActualPos(scrollmenu, width, pos+1);
-    if(change === 1) {
-        button_right.style.display = 'none';
-    } else {
-        button_right.style.display = 'block';
-        button_left.style.display = 'block';
-    }
-});
+    button_right.addEventListener('click', () => {
+        change = goToActualPos(elementos[i], configs[i]["width"], configs[i]["pos"]+1);
+        if(change === 1) {
+            button_right.style.display = 'none';
+        } else {
+            button_right.style.display = 'block';
+            button_left.style.display = 'block';
+        }
+    });
 
-button_left.addEventListener('click', () => {
-    change = goToActualPos(scrollmenu, width, pos-1);
-    if(change === -1) {
-        button_left.style.display = 'none';
-    } else {
-        button_left.style.display = 'block';
-        button_right.style.display = 'block';
-    }
-});
+    button_left.addEventListener('click', () => {
+        change = goToActualPos(elementos[i], configs[i]["width"], configs[i]["pos"]-1);
+        if(change === -1) {
+            button_left.style.display = 'none';
+        } else {
+            button_left.style.display = 'block';
+            button_right.style.display = 'block';
+        }
+    });
+}

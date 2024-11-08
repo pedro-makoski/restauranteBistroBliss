@@ -1,0 +1,44 @@
+#services {
+    padding: var(--padding-section-pc) var(--padding-section-phone);
+}
+
+.services {
+    margin: auto;
+    max-width: var(--width-size-max);
+}
+
+#services h2{ 
+    font-size: var(--h2-size-phone);
+    font-weight: var(--title-weight);
+    width: var(--cem-width);
+    margin-bottom: var(--margin-14);
+}
+
+#services div > div:has(article) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--gap-26);
+}
+
+#services article {
+    width: var(--cem-width);
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-27);
+}
+
+#services article img {
+    width: var(--cem-width);
+    object-fit: cover;
+    height: var(--height-img-event);
+    border-radius: var(--border-radius-1);
+}
+
+#services article h3 {
+    font-size: var(--h3-fontsize);
+}
+
+#services article p {
+    font-weight: light;
+}

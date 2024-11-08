@@ -1,0 +1,50 @@
+#what-they-say {
+    padding: var(--padding-section-pc) 0px;
+}
+
+#what-they-say > .coments{
+    max-width: var( --width-size-max);
+    margin: auto;
+}
+
+#what-they-say h2 {
+    font-size: var(--h2-size-phone);
+    font-weight: lighter;
+    text-align: center;
+    margin-bottom: var( --margin-14);
+}
+
+.coments {
+    width: var(--full-screen-width);
+    overflow: scroll;
+    display: flex; 
+}
+
+.coments::-webkit-scrollbar {
+    display: none;
+}
+
+#what-they-say article {
+    flex-shrink: 0;
+    margin: 0 calc(var(--mid-height) - var(--width-whattheysay)/2);
+    max-width: var(--width-whattheysay);
+    background-color: var(--cor-diferenciado-branco);
+    padding: var(--padding-14);
+    border-radius: var(--border-radius-1);
+    gap: var(--gap-28);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+#what-they-say article h3 {
+    font-size: var(--h3-fontsize);
+    color: var(--cor-destaque);
+}
+
+#what-they-say article aside {
+    display: flex;
+    align-items: center;
+    gap: var(--gap-28);
+}

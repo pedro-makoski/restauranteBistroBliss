@@ -1,13 +1,5 @@
 #about {
-    padding: 50px;
-    background-color: var(--cor-diferenciado-branco);
-}
-
-#about > div{
-    margin: auto;
-    max-width: 1296px;
-    display: flex;
-    justify-content: center;
+    padding: var(--padding-section-pc);
 }
 
 #about > div > div {
@@ -17,80 +9,31 @@
 
 .contact-with-image {
     width: fit-content;
-    height: fit-content;
-    position: relative;
-    padding-bottom: 50px;
-    margin-right: 150px;
+    margin-right: var(--margin-2);
 }
 
 #about img {
-    width: 500px;
-    height: 500px;
-    border-radius: 10px;
+    width: var(--width-img-about);
+    height: var(--width-img-about);
 }
 
 div.contact-us {
     position: absolute;
-    left: 200px;
-    top: 290px;
-    background-color: var(--cor-contraste);
-    width: 411px;
-    color: white;
-    padding: 50px;
-    border-radius: 10px;    
-}
-
-div.contact-us h2 {
-    font-family: var(--fonte-padrao);
-    margin-bottom: 20px;
-}
-
-div.contact-us > div {
-    display: flex;
-    flex-direction: column;
-    gap: 10px; 
-}
-
-div.contact-us > div > div {
-    display: flex;
-    gap: 20px;   
-}
-
-div.contact-us > div > div > div p{
-    font-weight: light;
+    left: var(--left-section-info);
+    top: var(--top-section-info);
+    width: var(--width-info); 
 }
 
 #about .we-provide {
-    width: 500px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+    width: var(--width-weprovide);
 }
 
 #about .we-provide h2{
-    font-weight: lighter;
-    font-size: 55px;
-}
-
-#about .we-provide strong {
-    font-size: 18px;
-    font-weight: 500;
+    font-size: var(--h2-size-pc);
 }
 
 .button-about {
     width: fit-content;
-    text-decoration: none;
-    text-align: center;
-    font-size: 0.8em;
-    color: var(--cor-contraste);
-    padding: 15px 20px;
-    border: 2px solid var(--cor-contraste);
-    border-radius: 50px;
-    font-weight: bold;
-}
-
-.button-about:hover {
-    background-color: var(--cor-cinza);
 }
 
 @media screen and (max-width: 1269px){
@@ -101,7 +44,7 @@ div.contact-us > div > div > div p{
 
     .contact-with-image {
         display: flex;
-        gap: 10px;
+        gap: var(--gap-1);
         margin: 0;
     }
 
@@ -110,14 +53,14 @@ div.contact-us > div > div > div p{
     }
 
     #about img {
-        width: 100%;
+        width: var(--cem-width);
     }
 
     div.contact-us {
         display: flex;
         justify-content: center;
         flex-direction: column;
-        width: 100%;
+        width: var(--cem-width);
         position: static;
         left: 0;
         right: 0;

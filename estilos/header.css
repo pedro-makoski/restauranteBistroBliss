@@ -1,5 +1,5 @@
 #contact {
-    max-width: 1296px;
+    max-width: var(--width-size-max);
 }
 
 #contact .informations {
@@ -7,17 +7,17 @@
 }
 
 div:has(nav) {
-    width: 100%;
-    padding: 10px 100px;
+    width: var(--cem-width);
+    padding: var(--padding-10);
 }
 
 nav {
-    padding: 10px 0;
-    max-width: 1296px;
+    padding: var(--padding-11) 0;
+    max-width: var(--width-size-max);
 }
 
 .logo a, .logo{
-    font-size: 1.2em;
+    font-size: var(--p-size);
 }
 
 nav ul {
@@ -30,7 +30,7 @@ nav ul {
     background-color: transparent;
     display: flex;
     flex-direction: row;
-    gap: 10px;
+    gap: var(--gap-25);
 }
 
 .exit, .hamburguer{
@@ -38,21 +38,21 @@ nav ul {
 }
 
 nav ul a {
-    padding: 7px;
-    width: 77px;
+    padding: var(--padding-12);
+    width: var(--width-3);
 }
 
 .header_main {
-    padding: 50px 0;
+    padding: var(--padding-section-pc) 0;
 }
 
 .header_main > div {
-    padding: 20px;
-    width: 600px;
+    padding: var(--padding-13);
+    width: var(--width-4);
 }
 
 .header_main h2 {
-    font-size: 5em;
+    font-size: var(--h2-main-size-pc);
 }
 
 .buttons_main a {

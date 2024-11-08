@@ -1,4 +1,4 @@
-const MAX_WIDTH_WITH_HAMBURGUER = 1040;
+const MAX_WIDTH_WITH_HAMBURGUER = 950;
 
 class HamburguerButton {
     constructor(menu) {
@@ -54,10 +54,10 @@ function closeIdentify(closeButton, button, local) {
 
 class ScrollFunctions {
     constructor(scroll_container, scroll_width) {
-        this.scroll_container = document.querySelector(scroll_container);
+        this.scroll_container = scroll_container;
         this.scroll_width = scroll_width;
-        this.length = this.scroll_container.children.length
-        this.scroll_size = this.length*this.scroll_width
+        this.length = this.scroll_container.children.length;
+        this.scroll_size = this.length*this.scroll_width;
     }
 
     scroll_left() {
@@ -70,7 +70,7 @@ class ScrollFunctions {
 
     demonstrate_status(place, color, noncolor) {
         let pos = this.show_status()-1;
-        this.place_satus = document.querySelector(place);
+        this.place_satus = place;
         this.place_satus_childrens = this.place_satus.children; 
         this.place_satus_childrens[pos].style.backgroundColor = color;
 
@@ -105,12 +105,12 @@ function demonstrate_scroll(element, width, guide, maincolor, othercolor, before
 
     scrollFunctions.goToNew(before);
 
-    return [scrollFunctions.scroll_container.scrollLeft, scrollFunctions.show_status(), change];
+    return [scrollFunctions.scroll_container.scrollLeft, scrollFunctions.show_status()];
 }
 
 function goToActualPos(element, width, pos) {
     const scrollFunctions = new ScrollFunctions(element, width);
-    scrollFunctions.goTo(pos)
+    scrollFunctions.goTo(pos);
     if(pos == 1) {
         return -1;
     } else if(pos >= scrollFunctions.length) {
