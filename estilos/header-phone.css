@@ -60,6 +60,8 @@ nav {
 }
 
 nav ul {
+    max-height: var(--height-menu);
+    overflow: auto;
     z-index: 999;
     display: none;
     flex-direction: column;
@@ -72,6 +74,19 @@ nav ul {
     transform: translate(-50%, -50%);
     list-style-type: none;
     padding: var(--padding-13);
+}
+
+nav ul::-webkit-scrollbar {
+    display: none;
+}
+
+@media screen and (max-height: 400px) {
+    nav ul {
+        max-height: var(--height-minor-menu);
+        left: 0;
+        top: 0;
+        transform: translate(0, 0);
+    }
 }
 
 .hamburguer {
@@ -105,7 +120,8 @@ nav ul {
 }
 
 nav ul a, .exit button{
-    width: var(--quase-quase-width-full-screen);
+    width: var(--quase-quase-width-full-screen-2);
+    max-width: var(--quase-quase-width-full-screen);
     text-decoration: none;
     text-align: center;
     color: var(--cor-contraste);

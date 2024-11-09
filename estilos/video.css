@@ -1,0 +1,88 @@
+#video-demonstration .video .iframe_video{
+    display: none;
+    min-height: var(--height-min-video);
+    background-color: var(--cor-contraste);
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+}
+
+#video-demonstration .video .iframe_video iframe {
+    border-radius: var(--border-radius-1);
+}
+
+#video-demonstration .video .appear_main{
+    background-image: url('../imgs/video-image.png');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: var(--padding-section-pc-video);
+    min-height: var(--height-min-video);
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    gap: var(--gap-29);
+}
+
+#video-demonstration .video h2 {
+    text-align: center;
+    width: var(--width-6);
+    font-weight: light;
+    font-size: var(--h2-size-pc);
+    color: var(--cor-contraste-do-contraste);
+} 
+
+#video-demonstration .video button {
+    border: none;
+    background-color: var(--cor-contraste-do-contraste);
+    width: var(--width-play);
+    height: var(--height-play);
+    border-radius: var(--full-radius);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#video-demonstration .video button svg {
+    transition: .2s;
+}
+
+#video-demonstration .video button:hover svg{
+    transform-origin: center center;
+    transform: scale(2);
+    transition: .2s;
+}
+
+#video-demonstration .video .exit_button {
+    width: var(--width-exit-button);
+    height: var(--height-exit-button);
+    margin-top: var(--margin-15);
+}
+
+#video-demonstration .video .exit_button:hover {
+    background-color: var(--cor-destaque);
+    color: white;
+}
+
+.about-video {
+    padding: var(--padding-section-pc);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--gap-32);
+}
+
+.about-video article {
+    flex-basis: var(--width-demonstrations);
+    display: flex;
+    align-items: flex-start;
+    gap: var(--gap-30);
+}
+
+.about-video article div {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-31);
+}

@@ -17,6 +17,7 @@
     --cor-cinza: #f1f1f1;
     --cor-diferenciacao: rgba(230, 230, 230, 0.341);
     --cor-diferenciado-branco: #F9F9F7;
+    --border-color: #DBDFD0;
     --semi-transparente: rgba(255, 255, 255, 0.734);
     
     --width-size-max: 1296px;
@@ -24,6 +25,7 @@
     --width-img-about: 500px;
     --cem-width:100%;
     --cem-height: 100%;
+    --quase-cem-height: 60%;
     --full-screen-width: 100vw;
     --width-info: 411px;
     --width-weprovide: 500px;
@@ -42,10 +44,16 @@
     --width-3: 77px;
     --width-4: 600px;
     --quase-width-full-screen: 90vw;
-    --quase-quase-width-full-screen: 70vw;
+    --quase-quase-width-full-screen: 665px;
+    --quase-quase-width-full-screen-2: 70vw;
     --height-img-event: 320px;
     --width-5: 306px;
+    --width-6: 50%;
     --width-whattheysay: 416px;
+    --height-menu: 420px;
+    --height-minor-menu: 300px;
+    --height-min-video: 600px;
+    --width-demonstrations: 27%;
 
     --width-guide-ball: 20px;
     --height-guide-ball: 20px;
@@ -53,13 +61,18 @@
     --height-bullet-ball: 30px;
     --hamburguer-width: 20px;
     --hamburguer-height: 2px;
+    --width-play: 106px;
+    --height-play: 106px;
 
     --width-img-footer: 170px;
     --height-img-footer: 170px;
     --major-width-container-img-footer: 200px;
     --major-height-container-img-footer: 200px;
+    --width-exit-button: 50px;
+    --height-exit-button: 50px;
 
     --padding-section-pc: 50px;
+    --padding-section-pc-video: 90px;
     --padding-bottom-1: 50px;
     --padding-section-phone: 35px;
     --padding-section-phone2: 25px;
@@ -92,6 +105,7 @@
     --margin-12: 30px;
     --margin-13: 50px;
     --margin-14: 50px;
+    --margin-15: 50px;
 
     --gap-1: 10px;
     --gap-2: 20px;
@@ -120,6 +134,12 @@
     --gap-26: 20px;
     --gap-27: 20px;
     --gap-28: 20px;
+    --gap-29: 15px;
+    --gap-30: 20px;
+    --gap-31: 15px;
+    --gap-32: 15px;
+    --gap-33: 20px;
+    --gap-34: 15px;
 
     --left-section-info: 200px;
     --top-section-info: 290px;
@@ -205,8 +225,38 @@ div:has(.button-move-scroll):hover .button-move-scroll, section:has(.button-move
     background-color: var(--cor-semi-preto);
 }
 
+.guide-balls {
+    display: flex;
+    width: fit-content;
+    margin: var(--margin-7) auto;
+    gap: var(--gap-8);
+}
+
+.guide-balls span{
+    display: block;
+    width: var(--width-guide-ball);
+    height: var(--height-guide-ball);
+    background-color: var(--cor-contraste-do-contraste);
+    border: var(--border-width-2) solid var(--cor-contraste);
+    border-radius: var(--full-radius);
+}
+
 @media screen and (max-width: 1296px){
     :root{
         --height-3: 1500px;
+    }
+}
+
+@media screen and (min-width: 950px){
+    .guide-balls {
+        display: none;
+    }
+    
+    .button-move-scroll {
+        display: none;
+    }
+    
+    div:has(.button-move-scroll):hover .button-move-scroll, section:has(.button-move-scroll):hover .button-move-scroll {
+        display: none;
     }
 }

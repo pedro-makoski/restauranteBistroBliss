@@ -61,19 +61,3 @@
     justify-content: center;
     border-radius: var(--full-radius);
 }
-
-.guide-balls {
-    display: flex;
-    width: fit-content;
-    margin: var(--margin-7) auto;
-    gap: var(--gap-8);
-}
-
-.guide-balls span{
-    display: block;
-    width: var(--width-guide-ball);
-    height: var(--height-guide-ball);
-    background-color: var(--cor-contraste-do-contraste);
-    border: var(--border-width-2) solid var(--cor-contraste);
-    border-radius: var(--full-radius);
-}
