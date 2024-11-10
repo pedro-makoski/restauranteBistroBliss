@@ -46,7 +46,7 @@ let isprimeiro = []
 
 const elements_to_change = Array.from(document.querySelectorAll('.change-number'));
 const WINDOW_SIZE = document.querySelector('body').getBoundingClientRect().height;
-const HEIGHT_APPEAR_ALL = 1200;
+const HEIGHT_APPEAR_ALL = 1500;
 
 for(let i = 0; i < elements_to_change.length; i++){
     if(typeof isprimeiro[i] == undefined) {
