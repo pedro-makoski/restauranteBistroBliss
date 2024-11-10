@@ -17,7 +17,7 @@
 #services div > div:has(article) {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: start;
     gap: var(--gap-26);
 }
 

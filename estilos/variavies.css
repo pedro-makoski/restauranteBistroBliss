@@ -20,7 +20,7 @@
     --border-color: #DBDFD0;
     --semi-transparente: rgba(255, 255, 255, 0.734);
     
-    --width-size-max: 1296px;
+    --width-size-max: 1400px;
     --height-img-about: 500px;
     --width-img-about: 500px;
     --cem-width:100%;
@@ -49,6 +49,7 @@
     --height-img-event: 320px;
     --width-5: 306px;
     --width-6: 50%;
+    --width-7: 50%;
     --width-whattheysay: 416px;
     --height-menu: 420px;
     --height-minor-menu: 300px;
@@ -140,6 +141,7 @@
     --gap-32: 15px;
     --gap-33: 20px;
     --gap-34: 15px;
+    --gap-35: 20px;
 
     --left-section-info: 200px;
     --top-section-info: 290px;

@@ -1,5 +1,7 @@
 #what-they-say {
     padding: var(--padding-section-pc);
+    max-width: var(--width-size-max);
+    margin: auto;
 }
 
 #what-they-say h2 {
