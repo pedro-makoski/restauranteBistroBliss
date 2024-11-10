@@ -9,6 +9,7 @@
 :root {
     --cor-contraste: #474747;
     --cor-contraste-blur: #f9f9f739;
+    --cor-contraste-blur-2:#4747470d; 
     --cor-semi-preto: #DBDFD0;
     --cor-semi-semi-preto: #9c9e95;
     --cor-contraste-do-contraste: white;
@@ -54,7 +55,9 @@
     --height-menu: 420px;
     --height-minor-menu: 300px;
     --height-min-video: 600px;
+    --height-min-video2: 200px;
     --width-demonstrations: 27%;
+    --height-6: 200px;
 
     --width-guide-ball: 20px;
     --height-guide-ball: 20px;
@@ -91,6 +94,7 @@
     --padding-12: 7px;
     --padding-13: 20px;
     --padding-14: 40px;
+    --padding-15: 20px;
 
     --margin-1: 20px;
     --margin-2: 150px;
@@ -107,6 +111,7 @@
     --margin-13: 50px;
     --margin-14: 50px;
     --margin-15: 50px;
+    --margin-16: 10px;
 
     --gap-1: 10px;
     --gap-2: 20px;
@@ -139,7 +144,7 @@
     --gap-30: 20px;
     --gap-31: 15px;
     --gap-32: 15px;
-    --gap-33: 20px;
+    --gap-33: 30px;
     --gap-34: 15px;
     --gap-35: 20px;
 

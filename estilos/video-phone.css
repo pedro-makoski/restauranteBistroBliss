@@ -1,0 +1,104 @@
+#video-demonstration .video .appear_main{
+    background-image: url('../imgs/video-image.png');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: var(--padding-section-pc);
+    min-height: var(--height-6);
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    gap: var(--gap-29);
+}
+
+#video-demonstration .video h2 {
+    text-align: center;
+    width: var(--cem-width);
+    font-weight: light;
+    font-size: var(--h2-size-phone);
+    color: var(--cor-contraste-do-contraste);
+} 
+
+#video-demonstration .video button {
+    border: none;
+    background-color: var(--cor-contraste-do-contraste);
+    width: var(--width-play);
+    height: var(--height-play);
+    border-radius: var(--full-radius);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#video-demonstration .video .iframe_video{
+    display: none;
+    padding: var(--padding-section-phone);
+    min-height: var(--height-min-video2);
+    background-color: var(--cor-contraste);
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+}
+
+#video-demonstration .video .iframe_video .iframe {
+    width: var(--cem-width);
+    height: var(--cem-height);
+    position: relative;
+    padding-bottom: 59%;
+}
+
+#video-demonstration .video .iframe_video iframe {
+    position: absolute;
+    border-radius: var(--border-radius-1);
+    top: 0%;
+    left: -0.9%;
+    width: 98%;
+    height: 98%;
+}
+
+#video-demonstration .video .exit_button {
+    width: var(--width-exit-button);
+    height: var(--height-exit-button);
+}
+
+#video-demonstration .video .exit_button:hover {
+    background-color: var(--cor-destaque);
+    color: white;
+}
+
+#video-demonstration .video button svg {
+    transition: .2s;
+}
+
+#video-demonstration .video button:hover svg{
+    transform-origin: center center;
+    transform: scale(2);
+    transition: .2s;
+}
+
+.about-video {
+    max-width: var(--width-size-max);
+    margin: auto;
+    padding: var(--padding-section-pc);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--gap-32);
+}
+
+.about-video article {
+    background-color: var(--cor-diferenciado-branco);
+    padding: var(--padding-8);
+    border-radius: var(--border-radius-1);
+    box-shadow: 1px 1px 10px var(--cor-contraste-blur-2);
+    border: var(--border-width-1) solid var(--cor-destaque);
+}
+
+.about-video article div {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-31);
+}
