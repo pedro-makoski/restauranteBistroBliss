@@ -26,7 +26,7 @@
     --width-img-about: 500px;
     --cem-width:100%;
     --cem-height: 100%;
-    --quase-cem-height: 60%;
+    --quase-cem-height: 64%;
     --full-screen-width: 100vw;
     --width-info: 411px;
     --width-weprovide: 500px;
@@ -52,7 +52,7 @@
     --width-6: 50%;
     --width-7: 50%;
     --width-whattheysay: 416px;
-    --height-menu: 420px;
+    --height-menu: 500px;
     --height-minor-menu: 300px;
     --height-min-video: 600px;
     --height-min-video2: 200px;
@@ -68,8 +68,8 @@
     --width-play: 106px;
     --height-play: 106px;
 
-    --width-img-footer: 170px;
-    --height-img-footer: 170px;
+    --width-img-footer: 150px;
+    --height-img-footer: 150px;
     --major-width-container-img-footer: 200px;
     --major-height-container-img-footer: 200px;
     --width-exit-button: 50px;
@@ -79,6 +79,7 @@
     --padding-section-pc-video: 90px;
     --padding-bottom-1: 50px;
     --padding-section-phone: 35px;
+    --padding-section-phone-minor: 20px;
     --padding-section-phone2: 25px;
     --padding-1: 15px;
     --padding-2: 10px;
@@ -95,6 +96,7 @@
     --padding-13: 20px;
     --padding-14: 40px;
     --padding-15: 20px;
+    --padding-16: 15px;
 
     --margin-1: 20px;
     --margin-2: 150px;
@@ -112,6 +114,7 @@
     --margin-14: 50px;
     --margin-15: 50px;
     --margin-16: 10px;
+    --margin-17: 20px;
 
     --gap-1: 10px;
     --gap-2: 20px;
@@ -147,6 +150,7 @@
     --gap-33: 30px;
     --gap-34: 15px;
     --gap-35: 20px;
+    --gap-36: 20px;
 
     --left-section-info: 200px;
     --top-section-info: 290px;

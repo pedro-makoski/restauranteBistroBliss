@@ -21,7 +21,7 @@ nav {
 }
 
 nav ul {
-    display: block;
+    width: var(--mid-width);
     border: none;
     position: static;
     left: 0;
@@ -29,7 +29,13 @@ nav ul {
     transform: translate(0, 0);
     background-color: transparent;
     display: flex;
+    justify-content: space-between;
     flex-direction: row;
+}
+
+.hubs {
+    display: flex;
+    align-items: center;
     gap: var(--gap-25);
 }
 
@@ -37,9 +43,14 @@ nav ul {
     display: none;
 }
 
-nav ul a {
+nav ul .hubs a {
     padding: var(--padding-12);
     width: var(--width-3);
+}
+
+nav ul .book {
+    width: fit-content;
+    padding: var(--padding-16);
 }
 
 .header_main {

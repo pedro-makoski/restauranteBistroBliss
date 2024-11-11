@@ -61,6 +61,7 @@
 #video-demonstration .video .exit_button {
     width: var(--width-exit-button);
     height: var(--height-exit-button);
+    margin-top: var(--margin-15);
 }
 
 #video-demonstration .video .exit_button:hover {

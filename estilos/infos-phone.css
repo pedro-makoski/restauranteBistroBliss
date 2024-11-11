@@ -4,7 +4,7 @@
 
 #infos > div{
     max-width: var(--width-size-max);
-    padding: var(--padding-section-pc);
+    padding: var(--padding-section-phone);
     display: flex;
     flex-wrap: wrap;
     gap: var(--gap-33);
@@ -12,10 +12,11 @@
 
 
 #infos .first-side {
-    width: 100%;
+    width: var(--cem-width);
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column;
+    gap: var(--gap-36);
+    flex-direction: row;
     justify-content: space-between;
 }
 
@@ -25,7 +26,7 @@
 }
 
 .informations {
-    width: 100%;
+    width: var(--cem-width);
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -46,7 +47,7 @@
     display: flex;
     flex-wrap: wrap;
     padding: var(--padding-15);
-    width: calc(50% - var(--gap-35));
+    width: calc(50% - var(--gap-35)/2);
     height: auto;
     border: var(--border-width-1) solid var(--border-color);
     border-radius: var(--border-radius-1);

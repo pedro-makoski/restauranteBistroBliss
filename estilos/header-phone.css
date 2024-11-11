@@ -80,7 +80,7 @@ nav ul::-webkit-scrollbar {
     display: none;
 }
 
-@media screen and (max-height: 400px) {
+@media screen and (max-height: 500px) {
     nav ul {
         max-height: var(--height-minor-menu);
         left: 0;
@@ -119,7 +119,7 @@ nav ul::-webkit-scrollbar {
     background-color: transparent;
 }
 
-nav ul a, .exit button{
+nav ul a, .exit button, nav ul .book{
     width: var(--quase-quase-width-full-screen-2);
     max-width: var(--quase-quase-width-full-screen);
     text-decoration: none;
