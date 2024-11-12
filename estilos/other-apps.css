@@ -1,0 +1,29 @@
+#order-apps {
+    background-color: var(--cor-diferenciado-branco);
+    padding: var(--padding-section-pc);
+}
+
+#order-apps > div {
+    text-align: left;
+    display: flex;
+    align-items: center;
+    max-width: var(--width-size-max-2);
+    margin: auto;
+    justify-content: center;
+    font-size: var(--p-size);
+}
+
+#order-apps img {
+    width: var(--width-img-order-apps);
+    height: var(--height-img-order-apps);
+}
+
+#order-apps .text {
+    width: var(--width-10);
+}
+
+#order-apps h2 {
+    font-size: var(--h2-size-pc);
+    font-weight: lighter;
+    margin-bottom: var(--margin-18);
+}

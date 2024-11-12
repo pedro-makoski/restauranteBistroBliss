@@ -22,6 +22,7 @@
     --semi-transparente: rgba(255, 255, 255, 0.734);
     
     --width-size-max: 1400px;
+    --width-size-max-2: 1296px;
     --height-img-about: 500px;
     --width-img-about: 500px;
     --cem-width:100%;
@@ -32,6 +33,7 @@
     --width-weprovide: 500px;
     --mid-height: 50%;
     --mid-width: 50%;
+    --mid-width-more: 70%;
     --max-width-1: 400px;
     --height-2: 600px;
     --mid-width-screen: 50vw;
@@ -58,6 +60,11 @@
     --height-min-video2: 200px;
     --width-demonstrations: 27%;
     --height-6: 200px;
+    --width-8: 500px;
+    --width-9: 306px;
+    --width-img-order-apps: 828px;
+    --height-img-order-apps: 350px;
+    --width-10: 500px;
 
     --width-guide-ball: 20px;
     --height-guide-ball: 20px;
@@ -97,6 +104,9 @@
     --padding-14: 40px;
     --padding-15: 20px;
     --padding-16: 15px;
+    --padding-17: 10px;
+    --padding-18: 30px;
+    --padding-19: 35px;
 
     --margin-1: 20px;
     --margin-2: 150px;
@@ -115,6 +125,7 @@
     --margin-15: 50px;
     --margin-16: 10px;
     --margin-17: 20px;
+    --margin-18: 25px;
 
     --gap-1: 10px;
     --gap-2: 20px;
@@ -151,6 +162,10 @@
     --gap-34: 15px;
     --gap-35: 20px;
     --gap-36: 20px;
+    --gap-37: 40px;
+    --gap-38: 10px;
+    --gap-39: 10px;
+    --gap-40: 20px;
 
     --left-section-info: 200px;
     --top-section-info: 290px;
@@ -158,9 +173,11 @@
 
     --title-weight: lighter;
     --h2-size-pc: 55px;
+    --h2-size-pc-especial: 100px;
     --h2-main-size-pc: 5em;
     --h2-size-phone: 2em;
     --strong-size: 18px;
+    --strong-size-2: 24px;
     --strong-weight: 500;
     --semi-strong-weight: 200;
     --button-font-size: 0.8em;
@@ -180,6 +197,7 @@
     --border-width-2: 1px;
     --border-width-3: 0.5px;
     --border-radius-1: 10px;
+    --border-radius-2: 15px;
     --border-radius-button: 50px;
     --full-radius: 50%;
 

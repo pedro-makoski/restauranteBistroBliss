@@ -1,0 +1,58 @@
+[
+    {
+        "name": "Fried Eggs",
+        "price": "R$ 9.99",
+        "description": "Made with eggs, lettuce, salt, oil and other ingredients.",
+        "type": "breakfast",
+        "img": "imgs/menuimgs/friedeggs.png"
+    },
+    {
+        "name": "Hawaiian Pizza",
+        "price": "R$ 15.99",
+        "description": "Made with eggs, lettuce, salt, oil and other ingredients.",
+        "type": "main-dishes",
+        "img": "imgs/menuimgs/pizza.png"
+    },
+    {
+        "name": "Martinez Cocktail",
+        "price": "R$ 7.25",
+        "description": "Made with eggs, lettuce, salt, oil and other ingredients.",
+        "type": "drinks",
+        "img": "imgs/menuimgs/cocktail.png"
+    },
+    {
+        "name": "Butterscotch Cake",
+        "price": "R$ 20.99",
+        "description": "Made with eggs, lettuce, salt, oil and other ingredients.",
+        "type": "desserts",
+        "img": "imgs/menuimgs/cake.png"
+    },
+    {
+        "name": "Mint Lemonade",
+        "price": "R$ 5.89",
+        "description": "Made with eggs, lettuce, salt, oil and other ingredients.",
+        "type": "drinks",
+        "img": "imgs/menuimgs/mint.png"
+    },
+    {
+        "name": "Chocolate Icecream",
+        "price": "R$ 18.05",
+        "description": "Made with eggs, lettuce, salt, oil and other ingredients.",
+        "type": "desserts",
+        "img": "imgs/menuimgs/chocolate.png"
+    },
+    {
+        "name": "Cheese Burguer",
+        "price": "R$ 12.55",
+        "description": "Made with eggs, lettuce, salt, oil and other ingredients.",
+        "type": "main-dishes",
+        "img": "imgs/menuimgs/hamburguer.png"
+    },
+    {
+        "name": "Classic Wuffles",
+        "price": "R$ 12.99",
+        "description": "Made with eggs, lettuce, salt, oil and other ingredients.",
+        "type": "breakfast",
+        "img": "imgs/menuimgs/wuffles.png"
+    }
+]
