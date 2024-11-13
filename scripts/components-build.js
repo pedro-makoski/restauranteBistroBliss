@@ -1,3 +1,71 @@
+const TEXTO_DE_SUMICO = '<p>Nothing to see here</p>'
+
+class JsonArrFunctions {
+    constructor(json) {
+        this.json = json;
+    }
+
+    filterPerKeyValue(key, value) {
+        this.newjson = [];
+        for(let i = 0; i < this.json.length; i++) {
+            if(this.json[i][key] === value) {
+                this.newjson.push(this.json[i]);
+            }
+        }
+
+        if(this.newjson.length === 0) {
+            return 0;
+        }
+
+        return this.newjson;
+    }
+
+    searchIndex(valueApart, parametrospesquisaveis) {
+        let idxs = [];
+        if(typeof valueApart !== undefined) {
+            for(let i = 0; i < this.json.length; i++) {
+                let atualValues = [];
+                for(let j = 0; j < parametrospesquisaveis.length; j++) {
+                    let now = this.json[i][parametrospesquisaveis[j]];
+
+                    if(typeof now === undefined) {
+                        continue;
+                    } else {
+                        atualValues.push(now);
+                    }
+                }
+
+                
+                for(let j = 0; j < atualValues.length; j++) {
+                    if(atualValues[j].toLowerCase().includes(valueApart.toLowerCase())) {
+                        idxs.push(i);
+                        j = atualValues.length;
+                    }
+                }
+            }
+        } else {
+            idxs = 0;
+        }
+
+        return idxs;
+    }
+
+    newJsonWithIndexes(indexes) {
+        this.newjson = []
+        console.log(indexes)
+
+        if(indexes === 0) {
+            return 0;
+        }
+
+        for(let i = 0; i < indexes.length; i++) {
+            this.newjson.push(this.json[indexes[i]])
+        }
+
+        return this.newjson;
+    }
+}
+
 class Component {
     constructor(json, componentstring) {
         this.componentstring = componentstring;
@@ -17,76 +85,28 @@ class Component {
         return this.newcomponent;
     }
 
-    createComponent() {
+    createComponents(filter) {
         this.res = '';
 
-        for(let i = 0; i < this.json.length; i++) {
-            this.res += this.substituir(this.json[i]);
+        if(this.json === 0) {
+
+           res = TEXTO_DE_SUMICO;
+        } else {
+            if(typeof filter !== "undefined") {
+                const JsonFunctions = new JsonArrFunctions(this.json)
+                this.jsonFiltered = JsonFunctions.filterPerKeyValue(filter[0], filter[1]);
+                if(this.jsonFiltered === 0) {
+                    res = TEXTO_DE_SUMICO;
+                }
+            } else {
+                this.jsonFiltered = this.json;
+            }
+    
+            for(let i = 0; i < this.jsonFiltered.length; i++) {
+                this.res += this.substituir(this.jsonFiltered[i]);
+            }
         }
 
         return this.res;
     }
 }
-
-const json = [
-    {
-        "name": "Fried Eggs",
-        "price": "R$ 9.99",
-        "description": "Made with eggs, lettuce, salt, oil and other ingredients.",
-        "type": "breakfast",
-        "img": "imgs/menuimgs/friedeggs.png"
-    },
-    {
-        "name": "Hawaiian Pizza",
-        "price": "R$ 15.99",
-        "description": "Made with eggs, lettuce, salt, oil and other ingredients.",
-        "type": "main-dishes",
-        "img": "imgs/menuimgs/pizza.png"
-    },
-    {
-        "name": "Martinez Cocktail",
-        "price": "R$ 7.25",
-        "description": "Made with eggs, lettuce, salt, oil and other ingredients.",
-        "type": "drinks",
-        "img": "imgs/menuimgs/cocktail.png"
-    },
-    {
-        "name": "Butterscotch Cake",
-        "price": "R$ 20.99",
-        "description": "Made with eggs, lettuce, salt, oil and other ingredients.",
-        "type": "desserts",
-        "img": "imgs/menuimgs/cake.png"
-    },
-    {
-        "name": "Mint Lemonade",
-        "price": "R$ 5.89",
-        "description": "Made with eggs, lettuce, salt, oil and other ingredients.",
-        "type": "drinks",
-        "img": "imgs/menuimgs/mint.png"
-    },
-    {
-        "name": "Chocolate Icecream",
-        "price": "R$ 18.05",
-        "description": "Made with eggs, lettuce, salt, oil and other ingredients.",
-        "type": "desserts",
-        "img": "imgs/menuimgs/chocolate.png"
-    },
-    {
-        "name": "Cheese Burguer",
-        "price": "R$ 12.55",
-        "description": "Made with eggs, lettuce, salt, oil and other ingredients.",
-        "type": "main-dishes",
-        "img": "imgs/menuimgs/hamburguer.png"
-    },
-    {
-        "name": "Classic Wuffles",
-        "price": "R$ 12.99",
-        "description": "Made with eggs, lettuce, salt, oil and other ingredients.",
-        "type": "breakfast",
-        "img": "imgs/menuimgs/wuffles.png"
-    }
-];
-
-const elementos = new Component(json, '<article><img src="{img}"><div><p><strong>{price}</strong></p><h3>{name}</h3><p>{description}</p></div></article>');
-const elements_place = document.querySelector('#menu .components');
-elements_place.innerHTML = elementos.createComponent()

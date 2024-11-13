@@ -14,6 +14,7 @@
 }
 
 #order-apps img {
+    object-fit: contain;
     width: var(--width-img-order-apps);
     height: var(--height-img-order-apps);
 }
