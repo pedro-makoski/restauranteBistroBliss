@@ -21,7 +21,7 @@ function obterFiltro() {
     let filtro;
     let url = new URL(window.location.href)
     let option = url.searchParams.get(NAME_PARAMETER);
-    if(option === "null") {
+    if(option == null) {
         option = 'all';
         url.searchParams.set(NAME_PARAMETER, 'all');
         window.history.replaceState({}, '', url); 

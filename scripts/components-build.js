@@ -96,7 +96,7 @@ class Component {
                 const JsonFunctions = new JsonArrFunctions(this.json)
                 this.jsonFiltered = JsonFunctions.filterPerKeyValue(filter[0], filter[1]);
                 if(this.jsonFiltered === 0) {
-                    res = TEXTO_DE_SUMICO;
+                    this.res = TEXTO_DE_SUMICO;
                 }
             } else {
                 this.jsonFiltered = this.json;
