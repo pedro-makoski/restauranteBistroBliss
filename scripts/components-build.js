@@ -13,10 +13,6 @@ class JsonArrFunctions {
             }
         }
 
-        if(this.newjson.length === 0) {
-            return 0;
-        }
-
         return this.newjson;
     }
 
@@ -53,8 +49,8 @@ class JsonArrFunctions {
     newJsonWithIndexes(indexes) {
         this.newjson = []
 
-        if(indexes === 0) {
-            return 0;
+        if(indexes.length === 0) {
+            return this.newjson;
         }
 
         for(let i = 0; i < indexes.length; i++) {
@@ -84,25 +80,14 @@ class Component {
         return this.newcomponent;
     }
 
-    createComponents(filter) {
+    createComponents() {
         this.res = '';
 
         if(this.json === 0) {
-
-           res = TEXTO_DE_SUMICO;
+           this.res = TEXTO_DE_SUMICO;
         } else {
-            if(typeof filter !== "undefined") {
-                const JsonFunctions = new JsonArrFunctions(this.json)
-                this.jsonFiltered = JsonFunctions.filterPerKeyValue(filter[0], filter[1]);
-                if(this.jsonFiltered === 0) {
-                    this.res = TEXTO_DE_SUMICO;
-                }
-            } else {
-                this.jsonFiltered = this.json;
-            }
-    
-            for(let i = 0; i < this.jsonFiltered.length; i++) {
-                this.res += this.substituir(this.jsonFiltered[i]);
+            for(let i = 0; i < this.json.length; i++) {
+                this.res += this.substituir(this.json[i]);
             }
         }
 

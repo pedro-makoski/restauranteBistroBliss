@@ -15,19 +15,22 @@ function searchForID(lista, id) {
             return i;
         }
     } 
+
+    return STANDARD_POSITION;
 }
 
 function obterFiltro() {
     let filtro;
     let url = new URL(window.location.href)
     let option = url.searchParams.get(NAME_PARAMETER);
-    if(option == null) {
+    let id = searchForID(hubs_of_menus_input, option);
+    if(option == null || typeof option === "undefined" || id === STANDARD_POSITION) {
         option = 'all';
         url.searchParams.set(NAME_PARAMETER, 'all');
         window.history.replaceState({}, '', url); 
     }
-
-    hubs_of_menus_input[searchForID(hubs_of_menus_input, option)].checked = true;
+    
+    hubs_of_menus_input[id].checked = true;
     filtro = option === STANDARD_POSITION_NAME ? [] : [NAME_PARAMETER, option];
     return filtro;
 }
@@ -40,17 +43,29 @@ function mudarLayout() {
             if(input.value !== '') {
                 const jsonFuncs = new JsonArrFunctions(json);
                 data = jsonFuncs.newJsonWithIndexes(jsonFuncs.searchIndex(input.value, ['name']));
-                if(data === 0) {
-                    data = TEXTO_DE_SUMICO;
+                if(data.length === 0) {
+                    elements_place.innerHTML = TEXTO_DE_SUMICO;
+                    return;
                 }
             }
-            
+
             filter = obterFiltro();
-            const elementos = new Component(data, '<article><img src="{img}"><div><p><strong>{price}</strong></p><h3>{name}</h3><p>{description}</p></div></article>');
-            elements_place.innerHTML = json.length !== 0 ? elementos.createComponents(filter) : TEXTO_DE_SUMICO;
+
+            if(typeof filter !== "undefined" && typeof data === "object") {
+                const JsonFunctions = new JsonArrFunctions(data)
+                data = JsonFunctions.filterPerKeyValue(filter[0], filter[1]);
+                if(data.length === 0) {
+                    elements_place.innerHTML = TEXTO_DE_SUMICO;
+                    return;
+                }
+            } 
+
+            if(typeof data === "object") {
+                const elementos = new Component(data, '<article><img src="{img}"><div><p><strong>{price}</strong></p><h3>{name}</h3><p>{description}</p></div></article>');
+                elements_place.innerHTML = data.length !== 0 ? elementos.createComponents() : TEXTO_DE_SUMICO;
+            }
         })
         .catch((error) => {elements_place.innerHTML = TEXTO_DE_SUMICO});
-
 }
 
 input.addEventListener('input', () => {
