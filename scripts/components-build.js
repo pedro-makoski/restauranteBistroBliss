@@ -52,7 +52,6 @@ class JsonArrFunctions {
 
     newJsonWithIndexes(indexes) {
         this.newjson = []
-        console.log(indexes)
 
         if(indexes === 0) {
             return 0;

@@ -40,7 +40,6 @@ function mudarLayout() {
             if(input.value !== '') {
                 const jsonFuncs = new JsonArrFunctions(json);
                 data = jsonFuncs.newJsonWithIndexes(jsonFuncs.searchIndex(input.value, ['name']));
-                console.log(data)
                 if(data === 0) {
                     data = TEXTO_DE_SUMICO;
                 }
