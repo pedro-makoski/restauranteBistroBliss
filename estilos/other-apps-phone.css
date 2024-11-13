@@ -1,0 +1,34 @@
+#order-apps {
+    background-color: var(--cor-diferenciado-branco);
+    padding: var(--padding-section-pc);
+}
+
+#order-apps > div {
+    text-align: left;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: var(--width-size-max-2);
+    margin: auto;
+    justify-content: center;
+    font-size: var(--p-size);
+}
+
+#order-apps img {
+    object-fit: contain;
+    width: var(--cem-width);
+}
+
+#order-apps .text {
+    width: var(--width-10);
+}
+
+#order-apps p {
+    font-size: var(--p-size-2);
+}
+
+#order-apps h2 {
+    font-size: var(--h2-size-phone);
+    font-weight: lighter;
+    margin-bottom: var(--margin-18);
+}
