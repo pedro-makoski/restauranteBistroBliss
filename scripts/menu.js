@@ -9,7 +9,7 @@ const elements_place = document.querySelector('#menu .components');
 const NAME_PARAMETER = 'menu-option'
 let filter;
 
-makeHubs(NAME_PARAMETER, '<div><input type="radio" id="{menu-option}" name="menu-option"><label for="{menu-option}">{menu-option-appear}</label></div>', hubs, NAME_PARAMETER, 'All', 'input[name="menu-option"] + label', 'input[name="menu-option"]');
+makeHubs(NAME_PARAMETER, "menu-option-appear", '<div><input type="radio" id="{menu-option}" name="menu-option"><label for="{menu-option}">{menu-option-appear}</label></div>', hubs, 'All', 'all', 'input[name="menu-option"] + label', 'input[name="menu-option"]');
 
 mudarLayout('./scripts/menu-itens.json', TEXTO_DE_SUMICO, input, true, obterFiltro,  '<article><img src="{img}"><div><p><strong>{price}</strong></p><h3>{name}</h3><p>{description}</p></div></article>', elements_place);
 
@@ -39,65 +39,55 @@ function obterFiltro() {
     return filtro;
 }
 
-function replace(string, key, value) {
-    let before = string;
-    let replaced = string.replace(key, value);
-
-    while(replaced !== before) {
-        before = replaced;
-        replaced = replaced.replace(key, value); 
-    }
-     
-    return replaced;
-}
-
-function criarHubs(data, hubname, string, hubs_div, substituir_values, standart) {
-    const JSON = new JsonArrFunctions(data);
-    let text_apply = {
-        "hubs_name": JSON.categortyList(hubname),
-        "hubs_name_appear":JSON.categortyList("menu-option-appear")    
-    }
-
-    const text_apply_values = Object.values(text_apply)
-    const text_apply_keys = Object.keys(text_apply)
-
-    let res = '';
-
-    let value = string;
-    for(let j = 0; j < substituir_values.length; j++) {
-        value = replace(value, `{${substituir_values[j]}}`, `${standart}`);
-    }
-    res += value;
-
-    console.log(text_apply["hubs_name"])
-    for(let i = 0; i < text_apply["hubs_name"].length; i++) {
-        value = string;
-        for(let j = 0; j < substituir_values.length; j++) {
-            value = replace(value, `{${substituir_values[j]}}`, `${text_apply[text_apply_keys[j]][i]}`);
+function ArrayToIndexArrays(object) {
+    const values = Object.values(object)    
+    const keys = Object.keys(object)    
+    let res = [];
+    for(let i = 0; i < values[0].length; i++) {
+        let objeto = {};
+        for(let j = 0; j < values.length; j++) {
+            objeto[keys[j]] = values[j][i];
         }
 
-        res += value;
+        
+        res.push(objeto)
     }
-
-
-    hubs_div.innerHTML += res; 
+    
+    return res;
 }
 
-function makeHubs(namepameter, string, place, searchOnListFor, standart, label_place, input_place) {
+function makeHubs(campo, campoappear, string, place, standart, standart2, label_place, input_place) {
     fetch('./scripts/menu-itens.json')
         .then(response => response.json())
         .then((json) => {
-            criarHubs(json, namepameter, string, place, [searchOnListFor, "menu-option-appear"], standart);
+            const JSON = new JsonArrFunctions(json);
             
+            let text_apply = {
+                "menu-option": JSON.categortyList(campo),
+                "menu-option-appear":JSON.categortyList(campoappear)    
+            }
+
+            text_apply = ArrayToIndexArrays(text_apply)
+
+            const component = new Component(text_apply, string);
+            const AllDesciption = {
+                "menu-option": standart2,
+                "menu-option-appear": standart,
+            }
+            const componentAll = new Component(AllDesciption, string)
+
+            place.innerHTML += componentAll.substituir(AllDesciption);
+            place.innerHTML += component.createComponents();  
 
             hubs_of_menus_label = Array.from(document.querySelectorAll(label_place));
+            console.log(hubs_of_menus_label)
             hubs_of_menus_input = Array.from(document.querySelectorAll(input_place));
             STANDARD_POSITION_NAME = hubs_of_menus_input[STANDARD_POSITION].id;
             checkControl()
 
             return json;
         })
-       // .catch((error) => console.log(error));
+       //.catch((error) => console.log(error));
 }   
 
 input.addEventListener('input', () => {

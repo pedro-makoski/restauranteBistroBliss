@@ -22,12 +22,13 @@ function checkControl() {
             } 
         }
 
+        
         hubs_of_menus_label[i].addEventListener('click', () => {
             let url = new URL(window.location.href)
             url.searchParams.set(NAME_PARAMETER, hubs_of_menus_input[i].id);
 
             window.history.replaceState({}, '', url);
-            mudarLayout('./scripts/menu-itens.json', TEXTO_DE_SUMICO, input, true, obterFiltro,  '<article><img src="{img}"><div><p><strong>{price}</strong></p><h3>{name}</h3><p>{description}</p></div></article>', elements_place);
+            mudarLayout('./scripts/menu-itens.json', TEXTO_DE_SUMICO, input, true, obterFiltro, '<article><img src="{img}"><div><p><strong>{price}</strong></p><h3>{name}</h3><p>{description}</p></div></article>', elements_place);
         })
     }
 }

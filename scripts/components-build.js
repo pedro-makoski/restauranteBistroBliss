@@ -1,5 +1,18 @@
 const TEXTO_DE_SUMICO = '<p>Nothing to see here</p>'
 
+function replace(string, key, value) {
+    let before = string;
+    let replaced = string.replace(key, value);
+
+    while(replaced !== before) {
+        before = replaced;
+        replaced = replaced.replace(key, value); 
+    }
+     
+    return replaced;
+}
+
+
 class JsonArrFunctions {
     constructor(json) {
         this.json = json;
@@ -87,7 +100,7 @@ class Component {
         const values_object = Object.values(values);
 
         for(let i = 0; i < keys_object.length; i++) {
-            this.newcomponent = this.newcomponent.replace(`{${keys_object[i]}}`, values_object[i]);
+            this.newcomponent = replace(this.newcomponent, `{${keys_object[i]}}`, values_object[i]);
             
         }
 
