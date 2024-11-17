@@ -4,6 +4,7 @@
         "price": "R$ 9.99",
         "description": "Made with eggs, lettuce, salt, oil and other ingredients.",
         "menu-option": "breakfast",
+        "menu-option-appear": "breakfast",
         "img": "imgs/menuimgs/friedeggs.png"
     },
     {
@@ -11,6 +12,7 @@
         "price": "R$ 15.99",
         "description": "Made with eggs, lettuce, salt, oil and other ingredients.",
         "menu-option": "main-dishes",
+        "menu-option-appear": "main dishes",
         "img": "imgs/menuimgs/pizza.png"
     },
     {
@@ -18,6 +20,7 @@
         "price": "R$ 7.25",
         "description": "Made with eggs, lettuce, salt, oil and other ingredients.",
         "menu-option": "drinks",
+        "menu-option-appear": "drinks",
         "img": "imgs/menuimgs/cocktail.png"
     },
     {
@@ -25,6 +28,7 @@
         "price": "R$ 20.99",
         "description": "Made with eggs, lettuce, salt, oil and other ingredients.",
         "menu-option": "desserts",
+        "menu-option-appear": "desserts",
         "img": "imgs/menuimgs/cake.png"
     },
     {
@@ -32,6 +36,7 @@
         "price": "R$ 5.89",
         "description": "Made with eggs, lettuce, salt, oil and other ingredients.",
         "menu-option": "drinks",
+        "menu-option-appear": "drinks",
         "img": "imgs/menuimgs/mint.png"
     },
     {
@@ -39,6 +44,7 @@
         "price": "R$ 18.05",
         "description": "Made with eggs, lettuce, salt, oil and other ingredients.",
         "menu-option": "desserts",
+        "menu-option-appear": "desserts",
         "img": "imgs/menuimgs/chocolate.png"
     },
     {
@@ -46,6 +52,7 @@
         "price": "R$ 12.55",
         "description": "Made with eggs, lettuce, salt, oil and other ingredients.",
         "menu-option": "main-dishes",
+        "menu-option-appear": "main dishes",
         "img": "imgs/menuimgs/hamburguer.png"
     },
     {
@@ -53,6 +60,7 @@
         "price": "R$ 12.99",
         "description": "Made with eggs, lettuce, salt, oil and other ingredients.",
         "menu-option": "breakfast",
+        "menu-option-appear": "breakfast",
         "img": "imgs/menuimgs/wuffles.png"
     },
     {
@@ -60,6 +68,7 @@
         "price": "R$ 12.99",
         "description":"Made with eggs, lettuce, salt, oil and other ingredients.",
         "menu-option": "desserts",
+        "menu-option-appear": "desserts",
         "img": "imgs/menuimgs/cake-chocolate.jpg"
     },
     {
@@ -67,6 +76,7 @@
         "price":"R$ 7.25",
         "description":"Made with eggs, lettuce, salt, oil and other ingredients.",
         "menu-option": "breakfast",
+        "menu-option-appear": "breakfast",
         "img": "imgs/menuimgs/eggs-bacons.jpg"
     },
     {
@@ -74,6 +84,7 @@
         "price":"R$ 9.35",
         "description":"Made with eggs, lettuce, salt, oil and other ingredients.",
         "menu-option": "main-dishes",
+        "menu-option-appear": "main dishes",
         "img": "imgs/menuimgs/espetinho.jpg"
     },
     {
@@ -81,6 +92,7 @@
         "price":"R$ 1.32",
         "description":"Made with eggs, lettuce, salt, oil and other ingredients.",
         "menu-option": "drinks",
+        "menu-option-appear": "drinks",
         "img": "imgs/menuimgs/refri.jpg"
     }
 ]

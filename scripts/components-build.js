@@ -31,9 +31,8 @@ class JsonArrFunctions {
                     }
                 }
 
-                
                 for(let j = 0; j < atualValues.length; j++) {
-                    if(atualValues[j].toLowerCase().includes(valueApart.toLowerCase())) {
+                    if(atualValues[j].toLowerCase().normalize("NFD").replace(/[\u0300-\u836f]/g, "").includes(valueApart.toLowerCase().normalize("NFD").replace(/[\u0300-\u836f]/g, ""))) {
                         idxs.push(i);
                         j = atualValues.length;
                     }
@@ -58,6 +57,21 @@ class JsonArrFunctions {
         }
 
         return this.newjson;
+    }
+
+    categortyList(categoryname) {
+        let list_output = [];
+
+        for(let i = 0; i < this.json.length; i++) {
+            let value = this.json[i][categoryname]
+            if(typeof value !==" undefined") {
+                if(!list_output.includes(value)){
+                    list_output.push(value);
+                }
+            }
+        }
+        
+        return list_output;
     }
 }
 
@@ -93,4 +107,42 @@ class Component {
 
         return this.res;
     }
+}
+
+
+function mudarLayout(path, textoDeSumico, inputElement, isFilter, FilterFunction, stringText, div_components) {
+    fetch(path)
+        .then(response => response.json())
+        .then((json) => {
+            let data = json;
+
+            if(input.value !== '') {
+                const jsonFuncs = new JsonArrFunctions(json);
+                data = jsonFuncs.newJsonWithIndexes(jsonFuncs.searchIndex(inputElement.value, ['name']));
+                if(data.length === 0) {
+                    elements_place.innerHTML = textoDeSumico;
+                    return;
+                }
+            }
+
+            if(isFilter) {
+                filter = FilterFunction();
+
+                if(typeof filter !== "undefined" && typeof data === "object") {
+                    const JsonFunctions = new JsonArrFunctions(data)
+        
+                    data = JsonFunctions.filterPerKeyValue(filter[0], filter[1]);
+                    if(data.length === 0) {
+                        elements_place.innerHTML = textoDeSumico;
+                        return;
+                    }
+                } 
+            }
+
+            if(typeof data === "object") {
+                const elementos = new Component(data, stringText);
+                div_components.innerHTML = data.length !== 0 ? elementos.createComponents() : textoDeSumico;
+            }
+        })
+        .catch((error) => {elements_place.innerHTML = textoDeSumico});
 }

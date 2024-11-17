@@ -1,13 +1,17 @@
-const hubs_of_menus_label = Array.from(document.querySelectorAll('input[name="menu-option"] + label'));
-const hubs_of_menus_input = Array.from(document.querySelectorAll('input[name="menu-option"]'));
+const hubs = document.querySelector('.hub-menus .options')
+let STANDARD_POSITION_NAME = '';
+
+let hubs_of_menus_label = Array.from(document.querySelectorAll('input[name="menu-option"] + label'));
+let hubs_of_menus_input = Array.from(document.querySelectorAll('input[name="menu-option"]'));
 const STANDARD_POSITION = 0;
-const STANDARD_POSITION_NAME = hubs_of_menus_input[STANDARD_POSITION].id;
 
 const elements_place = document.querySelector('#menu .components');
 const NAME_PARAMETER = 'menu-option'
 let filter;
 
-mudarLayout();
+makeHubs(NAME_PARAMETER, '<div><input type="radio" id="{menu-option}" name="menu-option"><label for="{menu-option}">{menu-option-appear}</label></div>', hubs, NAME_PARAMETER, 'All', 'input[name="menu-option"] + label', 'input[name="menu-option"]');
+
+mudarLayout('./scripts/menu-itens.json', TEXTO_DE_SUMICO, input, true, obterFiltro,  '<article><img src="{img}"><div><p><strong>{price}</strong></p><h3>{name}</h3><p>{description}</p></div></article>', elements_place);
 
 function searchForID(lista, id) {
     for(let i = 0; i < lista.length; i++) {
@@ -25,8 +29,8 @@ function obterFiltro() {
     let option = url.searchParams.get(NAME_PARAMETER);
     let id = searchForID(hubs_of_menus_input, option);
     if(option == null || typeof option === "undefined" || id === STANDARD_POSITION) {
-        option = 'all';
-        url.searchParams.set(NAME_PARAMETER, 'all');
+        option = STANDARD_POSITION_NAME;
+        url.searchParams.set(NAME_PARAMETER, STANDARD_POSITION_NAME);
         window.history.replaceState({}, '', url); 
     }
     
@@ -35,39 +39,67 @@ function obterFiltro() {
     return filtro;
 }
 
-function mudarLayout() {
+function replace(string, key, value) {
+    let before = string;
+    let replaced = string.replace(key, value);
+
+    while(replaced !== before) {
+        before = replaced;
+        replaced = replaced.replace(key, value); 
+    }
+     
+    return replaced;
+}
+
+function criarHubs(data, hubname, string, hubs_div, substituir_values, standart) {
+    const JSON = new JsonArrFunctions(data);
+    let text_apply = {
+        "hubs_name": JSON.categortyList(hubname),
+        "hubs_name_appear":JSON.categortyList("menu-option-appear")    
+    }
+
+    const text_apply_values = Object.values(text_apply)
+    const text_apply_keys = Object.keys(text_apply)
+
+    let res = '';
+
+    let value = string;
+    for(let j = 0; j < substituir_values.length; j++) {
+        value = replace(value, `{${substituir_values[j]}}`, `${standart}`);
+    }
+    res += value;
+
+    console.log(text_apply["hubs_name"])
+    for(let i = 0; i < text_apply["hubs_name"].length; i++) {
+        value = string;
+        for(let j = 0; j < substituir_values.length; j++) {
+            value = replace(value, `{${substituir_values[j]}}`, `${text_apply[text_apply_keys[j]][i]}`);
+        }
+
+        res += value;
+    }
+
+
+    hubs_div.innerHTML += res; 
+}
+
+function makeHubs(namepameter, string, place, searchOnListFor, standart, label_place, input_place) {
     fetch('./scripts/menu-itens.json')
         .then(response => response.json())
         .then((json) => {
-            let data = json;
-            if(input.value !== '') {
-                const jsonFuncs = new JsonArrFunctions(json);
-                data = jsonFuncs.newJsonWithIndexes(jsonFuncs.searchIndex(input.value, ['name']));
-                if(data.length === 0) {
-                    elements_place.innerHTML = TEXTO_DE_SUMICO;
-                    return;
-                }
-            }
+            criarHubs(json, namepameter, string, place, [searchOnListFor, "menu-option-appear"], standart);
+            
 
-            filter = obterFiltro();
+            hubs_of_menus_label = Array.from(document.querySelectorAll(label_place));
+            hubs_of_menus_input = Array.from(document.querySelectorAll(input_place));
+            STANDARD_POSITION_NAME = hubs_of_menus_input[STANDARD_POSITION].id;
+            checkControl()
 
-            if(typeof filter !== "undefined" && typeof data === "object") {
-                const JsonFunctions = new JsonArrFunctions(data)
-                data = JsonFunctions.filterPerKeyValue(filter[0], filter[1]);
-                if(data.length === 0) {
-                    elements_place.innerHTML = TEXTO_DE_SUMICO;
-                    return;
-                }
-            } 
-
-            if(typeof data === "object") {
-                const elementos = new Component(data, '<article><img src="{img}"><div><p><strong>{price}</strong></p><h3>{name}</h3><p>{description}</p></div></article>');
-                elements_place.innerHTML = data.length !== 0 ? elementos.createComponents() : TEXTO_DE_SUMICO;
-            }
+            return json;
         })
-        .catch((error) => {elements_place.innerHTML = TEXTO_DE_SUMICO});
-}
+       // .catch((error) => console.log(error));
+}   
 
 input.addEventListener('input', () => {
-    mudarLayout();
+    mudarLayout('./scripts/menu-itens.json', TEXTO_DE_SUMICO, input, true, obterFiltro,  '<article><img src="{img}"><div><p><strong>{price}</strong></p><h3>{name}</h3><p>{description}</p></div></article>', elements_place);
 })
