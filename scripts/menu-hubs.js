@@ -6,7 +6,7 @@ function checkControl() {
             let url = new URL(window.location.href)
             url.searchParams.set(NAME_PARAMETER, hubs_of_menus_input[i].id);
             window.history.replaceState({}, '', url); 
-            mudarLayout('./scripts/menu-itens.json', TEXTO_DE_SUMICO, input, true, obterFiltro,  '<article><img src="{img}"><div><p><strong>{price}</strong></p><h3>{name}</h3><p>{description}</p></div></article>', elements_place);
+            mudarLayout('./scripts/menu-itens.json', TEXTO_DE_SUMICO, true, input, true, obterFiltro,  '<article><img src="{img}"><div><p><strong>{price}</strong></p><h3>{name}</h3><p>{description}</p></div></article>', elements_place, ["name"]);
         } else {
             total_not_checked++;
             if(total_not_checked === hubs_of_menus_label.length) {
@@ -18,7 +18,7 @@ function checkControl() {
 
                     window.history.replaceState({}, '', url); 
                 } 
-                mudarLayout('./scripts/menu-itens.json', TEXTO_DE_SUMICO, input, true, obterFiltro,  '<article><img src="{img}"><div><p><strong>{price}</strong></p><h3>{name}</h3><p>{description}</p></div></article>', elements_place);
+                mudarLayout('./scripts/menu-itens.json', TEXTO_DE_SUMICO, true, input, true, obterFiltro,  '<article><img src="{img}"><div><p><strong>{price}</strong></p><h3>{name}</h3><p>{description}</p></div></article>', elements_place, ["name"]);
             } 
         }
 
@@ -28,7 +28,7 @@ function checkControl() {
             url.searchParams.set(NAME_PARAMETER, hubs_of_menus_input[i].id);
 
             window.history.replaceState({}, '', url);
-            mudarLayout('./scripts/menu-itens.json', TEXTO_DE_SUMICO, input, true, obterFiltro, '<article><img src="{img}"><div><p><strong>{price}</strong></p><h3>{name}</h3><p>{description}</p></div></article>', elements_place);
+            mudarLayout('./scripts/menu-itens.json', TEXTO_DE_SUMICO, true, input, true, obterFiltro, '<article><img src="{img}"><div><p><strong>{price}</strong></p><h3>{name}</h3><p>{description}</p></div></article>', elements_place, ["name"]);
         })
     }
 }

@@ -1,0 +1,74 @@
+[
+    {
+        "path": "pages/how-to-prepare-a-delicious-gluten-free-sushi.html",
+        "title": "How to prepare a delicious gluten free sushi",
+        "date": "January 3, 2023",
+        "imgUrl": "imgs/blog_imgs/1.png"
+    },
+    {
+        "path": "pages/exclusive-baking-lessons-from-the-pastry-king.html",
+        "title": "Exclusive baking lessons from the pastry king",
+        "date": "January 3, 2023",
+        "imgUrl": "imgs/blog_imgs/2.png"
+    },
+    {
+        "path": "pages/how-to-prepare-the-perfect-fries-in-an-air-fryer.html",
+        "title": "How to prepare the perfect fries in an air fryer",
+        "date": "January 3, 2023",
+        "imgUrl": "imgs/blog_imgs/3.png"
+    },
+    {
+        "path": "pages/how-to-prepare-the-perfect-fries-in-an-air-fryer.html",
+        "title": "how to prepare delicious chicken tenders",
+        "date": "January 3, 2023",
+        "imgUrl": "imgs/blog_imgs/4.png"
+    }, 
+    {
+        "path": "pages/5-great-cooking-gadgets-you-can-buy-to-save-time.html",
+        "title": "5 great cooking gadgets you can buy to save time",
+        "date": "January 3, 2023",
+        "imgUrl": "imgs/blog_imgs/5.png"
+    },
+    {
+        "path": "pages/the-secret-tips-tricks-to-prepare-a-perfect-burger.html",
+        "title": "The secret tips & tricks to prepare a perfect burger",
+        "date": "January 3, 2023",
+        "imgUrl": "imgs/blog_imgs/6.png"
+    },
+    {
+        "path": "pages/7-delicious-cheesecake-recipes-you-can-prepare.html",
+        "title": "7 delicious cheesecake recipes you can prepare",
+        "date": "January 3, 2023",
+        "imgUrl": "imgs/blog_imgs/7.png"
+    },
+    {
+        "path": "pages/5-great-pizza-restaurants-you-should-visit-this-citye.html",
+        "title": "5 great pizza restaurants you should visit this city",
+        "date": "January 3, 2023",
+        "imgUrl": "imgs/blog_imgs/8.png"
+    },
+    {
+        "path": "pages/5-great-cooking-gadgets-you-can-buy-to-save-time.html",
+        "title": "5 great cooking gadgets you can buy to save time",
+        "date": "January 3, 2023",
+        "imgUrl": "imgs/blog_imgs/9.png"
+    },
+    {
+        "path": "pages/how-to-prepare-a-delicious-gluten-free-sushi.html",
+        "title": "How to prepare a delicious gluten free sushi",
+        "date": "January 3, 2023",
+        "imgUrl": "imgs/blog_imgs/10.png"
+    },
+    {
+        "path": "pages/top-20-simple-and-quick-desserts-for-kids.html",
+        "title": "Top 20 simple and quick desserts for kids",
+        "date": "January 3, 2023",
+        "imgUrl": "imgs/blog_imgs/11.png"
+    },
+    {
+        "path": "pages/top-20-simple-and-quick-desserts-for-kids-2.html",
+        "title": "Top 20 simple and quick desserts for kids",
+        "date": "January 3, 2023",
+        "imgUrl": "imgs/blog_imgs/12.png"
+    }
+]

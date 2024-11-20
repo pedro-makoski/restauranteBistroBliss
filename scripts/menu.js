@@ -11,7 +11,7 @@ let filter;
 
 makeHubs(NAME_PARAMETER, "menu-option-appear", '<div><input type="radio" id="{menu-option}" name="menu-option"><label for="{menu-option}">{menu-option-appear}</label></div>', hubs, 'All', 'all', 'input[name="menu-option"] + label', 'input[name="menu-option"]');
 
-mudarLayout('./scripts/menu-itens.json', TEXTO_DE_SUMICO, input, true, obterFiltro,  '<article><img src="{img}"><div><p><strong>{price}</strong></p><h3>{name}</h3><p>{description}</p></div></article>', elements_place);
+mudarLayout('./scripts/menu-itens.json', TEXTO_DE_SUMICO, true, input, true, obterFiltro,  '<article><img src="{img}"><div><p><strong>{price}</strong></p><h3>{name}</h3><p>{description}</p></div></article>', elements_place, ["name"]);
 
 function searchForID(lista, id) {
     for(let i = 0; i < lista.length; i++) {
@@ -87,9 +87,9 @@ function makeHubs(campo, campoappear, string, place, standart, standart2, label_
 
             return json;
         })
-       //.catch((error) => console.log(error));
+       .catch((error) => console.log(error));
 }   
 
 input.addEventListener('input', () => {
-    mudarLayout('./scripts/menu-itens.json', TEXTO_DE_SUMICO, input, true, obterFiltro,  '<article><img src="{img}"><div><p><strong>{price}</strong></p><h3>{name}</h3><p>{description}</p></div></article>', elements_place);
+    mudarLayout('./scripts/menu-itens.json', TEXTO_DE_SUMICO, true, input, true, obterFiltro,  '<article><img src="{img}"><div><p><strong>{price}</strong></p><h3>{name}</h3><p>{description}</p></div></article>', elements_place, ["name"]);
 })

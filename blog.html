@@ -1,19 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta name="description" content="Itens do Menu do restaurante Bistro Bliss">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu Bistro Bliss</title>
+    <title>Blogs</title>
     <link rel="stylesheet" href="estilos/variavies.css">
     <link rel="stylesheet" href="estilos/header-phone.css">
     <link rel="stylesheet" href="estilos/header.css" media="(min-width: 950px)">
     <link rel="stylesheet" href="estilos/footer-phone.css">
     <link rel="stylesheet" href="estilos/footer.css" media="(min-width: 950px)">
-    <link rel="stylesheet" href="estilos/menu-browse-phone.css">
-    <link rel="stylesheet" href="estilos/menu-browse.css" media="(min-width: 950px)">
-    <link rel="stylesheet" href="estilos/other-apps-phone.css">
-    <link rel="stylesheet" href="estilos/other-apps.css" media="(min-width: 950px)">
+    <link rel="stylesheet" href="estilos/blogs-page-phone.css">
+    <link rel="stylesheet" href="estilos/blogs-page.css" media="(min-width: 950px)">
 </head>
 <body>
     <header>
@@ -80,71 +77,29 @@
                         <li class="exit"><button>x</button></li>
                         <li><a href="index.html" target="_self">Home</a></li>
                         <li><a href="about.html" target="_self" rel="next">About</a></li>
-                        <li><a href="menu.html" target="_self" rel="next" class="actual">Menu</a></li>
-                        <li><a href="blog.html" target="_self" rel="next">Pages</a></li>
+                        <li><a href="menu.html" target="_self" rel="next">Menu</a></li>
+                        <li><a href="blog.html" target="_self" rel="next"  class="actual">Pages</a></li>
                         <li><a href="contact.html" target="_self" rel="next">Contact</a></li>
                     </div>
                     <a href="book.html" rel="next" target="_self" class="book">Book a Table</a>
                 </ul>
             </nav>
         </div>
-    </header>
-    <main>
-        <section id="menu">
+        <section id="title">
             <div>
-                <div class="text">
-                    <div class="title">
-                        <h2>Our Menu</h2>
-                        <p>We consider all the drivers of change gives you the components you need to change to create a truly happens.</p>
-                    </div>
-                    <div class="hub-menus">
-                        <div class="options">
-                            <!-- <div>
-                                <input type="radio" id="all" name="menu-option">
-                                <label for="all">All</label>
-                            </div>
-                            <div>
-                                <input type="radio" id="breakfast" name="menu-option">
-                                <label for="breakfast">Breakfast</label>
-                            </div>
-                            <div>
-                                <input type="radio" id="main-dishes" name="menu-option">
-                                <label for="main-dishes">Main Dishes</label>
-                            </div>
-                            <div>
-                                <input type="radio" id="drinks" name="menu-option">
-                                <label for="drinks">Drinks</label>
-                            </div>
-                            <div>
-                                <input type="radio" id="desserts" name="menu-option">
-                                <label for="desserts">Desserts</label>
-                            </div> -->
-                        </div>
-                        <div class="div-search-input-menu">
-                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="var(--cor-destaque)"><path d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z"/></svg>
-                            <input type="text" placeholder="search an menu item" id="search-input-menu" autocomplete="off">
-                        </div>
-                    </div>
-                </div>
-                <div class="components">
-                    <!-- <article>
-                        <img src="imgs/menuimgs/friedeggs.png" alt="Imagem de ovo frito">
-                        <div>
-                            <p><strong>R$ 9.99</strong></p>
-                            <h3>Fried Eggs</h3>
-                            <p>Made with eggs, lettuce, salt, oil and other ingredients.</p>
-                        </div>
-                    </article> -->
-                </div>
+                <h2>Our Blog & Articles</h2>
+                <p>We consider all the drivers of change gives you the components you need to change to create a truly happens.</p>
             </div>
         </section>
-        <section id="order-apps">
-            <div>
-                <div class="text">
-                    <h2>You can order through apps</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit enim bibendum sed et aliquet aliquet risus tempor semper.</p>
-                </div>
-                <img src="imgs/logos-menu.png" alt="Imagem dos Apps para pedir comida: Uber eats, GRUHUB, PostMates, DoorDash, FoodPanda, Deliveroo, instacart, Just Eat, Didi Food">
+    </header>
+    <main>
+        <section id="blogs">
+            <div class="search-blog">
+                <input type="text" id="search" name="search">
+                <label for="search">Search</label>
+            </div>
+            <div class="components">
+                
             </div>
         </section>
     </main>
@@ -213,8 +168,6 @@
     <script src="scripts/module.js"></script>
     <script src="scripts/hamburguer.js"></script>
     <script src="scripts/components-build.js"></script>
-    <script src="scripts/input-search.js"></script>
-    <script src="scripts/menu.js"></script>
-    <script src="scripts/menu-hubs.js"></script>
+    <script src="scripts/blogs.js"></script>
 </body>
 </html>

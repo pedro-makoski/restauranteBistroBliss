@@ -1,0 +1,115 @@
+header > #title {
+    padding: var(--padding-section-phone);
+}
+
+header > #title > div {
+    max-width: var(--width-size-max-2);
+    text-align: center;
+    margin: auto;
+}
+
+#title h2 {
+    font-size: var(--h2-size-phone-especial);
+    font-weight: lighter;
+}
+
+#blogs {
+    background-color: var(--cor-diferenciado-branco);
+    padding: var(--padding-section-phone); 
+}
+
+.search-blog {
+    max-width: var(--width-size-max);
+    margin: auto;
+
+    position: relative;
+    padding: var(--padding-section-phone) 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-43);
+}
+
+.search-blog label {
+    display: block;
+    position: absolute;
+    top: 43%;
+    left: 1.5%;
+    font-weight: bold;
+    transition: .2s;
+}
+
+.search-blog label::after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 0;
+    background-color: var(--cor-destaque);
+    transition: .2s;
+}
+
+.search-blog input:focus + label {
+    top: 0;
+    left: 1.5%;
+    transition: .2s;
+}
+
+.search-blog input:focus + label::after {
+    width: 100%;
+    transition: .2s;
+}
+
+.search-blog input {
+    border: none;
+    box-shadow: 1px 1px 5px var(--shawdow-color);
+    border-radius: var(--border-radius-1);
+    padding: 15px;
+}
+
+.search-blog input:focus {
+    outline-color: var(--cor-destaque);
+}
+
+#blogs > .components {
+    max-width: var(--width-size-max);
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: var(--gap-42);
+    justify-content: center;
+}
+
+.blog a{
+    text-decoration: none;
+    color: var(--cor-contraste);
+    border-radius: var(--border-radius-2);
+    height: var(--cem-height);
+    box-shadow: 1px 1px 10px var(--shawdow-color);
+    width: 100%;
+    height: 340px;
+    gap: var(--gap-41);
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    overflow: auto;
+    outline: 0 solid var(--cor-destaque);
+    transition: .1s;
+}
+
+.blog a:hover {
+    outline-width: 3px;
+    transition: .1s;
+}
+
+.blog img {
+    height: 200px;
+    object-fit: cover;
+}
+
+.blog .title {
+    padding: var(--padding-22);
+    display: flex;
+    height: var(--cem-height);
+    flex-direction: column-reverse;
+    justify-content: space-between;
+}

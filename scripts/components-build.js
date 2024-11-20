@@ -123,30 +123,32 @@ class Component {
 }
 
 
-function mudarLayout(path, textoDeSumico, inputElement, isFilter, FilterFunction, stringText, div_components) {
+function mudarLayout(path, textoDeSumico, isInputable, inputElement, isFilter, FilterFunction, stringText, div_components, inputSearchItens) {
     fetch(path)
         .then(response => response.json())
         .then((json) => {
             let data = json;
 
-            if(input.value !== '') {
-                const jsonFuncs = new JsonArrFunctions(json);
-                data = jsonFuncs.newJsonWithIndexes(jsonFuncs.searchIndex(inputElement.value, ['name']));
-                if(data.length === 0) {
-                    elements_place.innerHTML = textoDeSumico;
-                    return;
+            if(isInputable) {
+                if(input.value !== '') {
+                    const jsonFuncs = new JsonArrFunctions(json);
+                    data = jsonFuncs.newJsonWithIndexes(jsonFuncs.searchIndex(inputElement.value, inputSearchItens));
+                    if(data.length === 0) {
+                        div_components.innerHTML = textoDeSumico;
+                        return;
+                    }
                 }
             }
 
             if(isFilter) {
-                filter = FilterFunction();
+                let filter = FilterFunction();
 
                 if(typeof filter !== "undefined" && typeof data === "object") {
                     const JsonFunctions = new JsonArrFunctions(data)
         
                     data = JsonFunctions.filterPerKeyValue(filter[0], filter[1]);
                     if(data.length === 0) {
-                        elements_place.innerHTML = textoDeSumico;
+                        div_components.innerHTML = textoDeSumico;
                         return;
                     }
                 } 
@@ -157,5 +159,5 @@ function mudarLayout(path, textoDeSumico, inputElement, isFilter, FilterFunction
                 div_components.innerHTML = data.length !== 0 ? elementos.createComponents() : textoDeSumico;
             }
         })
-        .catch((error) => {elements_place.innerHTML = textoDeSumico});
+        .catch((error) => {div_components.innerHTML = textoDeSumico});
 }

@@ -1,0 +1,28 @@
+header > #title {
+    padding: var(--padding-section-pc);
+}
+
+#title h2 {
+    font-size: var(--h2-size-pc-especial);
+}
+
+#title p {
+    width: var(--mid-width);
+    margin: auto;
+}
+
+#blogs {
+    padding: var(--padding-section-pc); 
+}
+
+.search-blog input:focus + label {
+    left: 0;
+}
+
+.search-blog {
+    padding: var(--padding-section-pc) 0;
+}
+
+.blog a {
+    width: 306px;
+}

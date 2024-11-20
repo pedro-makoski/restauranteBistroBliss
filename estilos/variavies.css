@@ -20,6 +20,7 @@
     --cor-diferenciado-branco: #F9F9F7;
     --border-color: #DBDFD0;
     --semi-transparente: rgba(255, 255, 255, 0.734);
+    --shawdow-color: rgba(0, 0, 0, 0.053);
     
     --width-size-max: 1400px;
     --width-size-max-2: 1296px;
@@ -116,6 +117,7 @@
     --padding-19: 35px;
     --padding-20: 5px;
     --padding-21: 10px;
+    --padding-22: 20px;
 
     --margin-1: 20px;
     --margin-2: 150px;
@@ -176,6 +178,9 @@
     --gap-38: 10px;
     --gap-39: 10px;
     --gap-40: 20px;
+    --gap-41: 10px;
+    --gap-42: 30px;
+    --gap-43: 15px;
 
     --left-section-info: 200px;
     --top-section-info: 290px;
