@@ -1,4 +1,5 @@
 const configs_video = "&autoplay=1&mute=0&controls=1&loop=1&rel=1";
+let isprimeiro = []
 
 function appearVideo(container_to_disapear, video, iframe) {
     container_to_disapear.style.display = 'none';
@@ -42,7 +43,17 @@ exit_button.addEventListener('click', () => {
     dissapearVideo(before_video, video, iframe_video)
 })
 
-let isprimeiro = []
+function scrollIncrement(elemento, father, i, time) {
+    let elemento_pai_bounding = elements_to_change[i].closest(father).getBoundingClientRect()
+
+    let final_value = parseInt(elements_to_change[i].getAttribute("data-final"));
+    const start = elements_to_change[i].innerHTML;
+    
+    if(!isprimeiro[i] && elemento_pai_bounding.top <= elemento_pai_bounding.height && elemento_pai_bounding.bottom >= 0) {
+        isprimeiro[i] = true;
+        atualizarElemento(start, final_value, elemento, time);
+    }
+}
 
 const elements_to_change = Array.from(document.querySelectorAll('.change-number'));
 const WINDOW_SIZE = document.querySelector('body').getBoundingClientRect().height;
@@ -54,31 +65,14 @@ for(let i = 0; i < elements_to_change.length; i++){
     }
 
 
-    let final_value = parseInt(elements_to_change[i].getAttribute("data-final"));
-
-    const start = elements_to_change[i].innerHTML;
-
-    let elemento_pai_bounding = elements_to_change[i].closest('section').getBoundingClientRect()
-
-    if(!isprimeiro[i] && ((elemento_pai_bounding.top <= elemento_pai_bounding.height && elemento_pai_bounding.bottom >= 0) || ((window.innerHeight >= HEIGHT_APPEAR_ALL)))) {
-        isprimeiro[i] = true; 
-        atualizarElemento(start, final_value, elements_to_change[i], 20);
-    }   
+    scrollIncrement(elements_to_change[i], ".container-data-count", i, 20)
  
     window.addEventListener('scroll', () => {
-        let elemento_pai_bounding = elements_to_change[i].closest('section').getBoundingClientRect()
-        if(!isprimeiro[i] && elemento_pai_bounding.top <= elemento_pai_bounding.height && elemento_pai_bounding.bottom >= 0) {
-            isprimeiro[i] = true;
-            atualizarElemento(start, final_value, elements_to_change[i], 20);
-        }
+      scrollIncrement(elements_to_change[i], ".first-side", i, 20);
     })
 
     window.addEventListener('resize', () => {
-        let elemento_pai_bounding = elements_to_change[i].closest('section').getBoundingClientRect()
-
-        if(!isprimeiro[i] && ((elemento_pai_bounding.top <= elemento_pai_bounding.height && elemento_pai_bounding.bottom >= 0) || ((window.innerHeight >= HEIGHT_APPEAR_ALL)))) {
-            isprimeiro[i] = true; 
-            atualizarElemento(start, final_value, elements_to_change[i], 20);
-        }
+        elemento_pai_bounding = elements_to_change[i].closest(father).getBoundingClientRect()
+        scrollIncrement(elements_to_change[i], ".first-side", i, 20);
     })
 }
