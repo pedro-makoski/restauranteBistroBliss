@@ -22,6 +22,12 @@
     --semi-transparente: rgba(255, 255, 255, 0.734);
     --shawdow-color: rgba(0, 0, 0, 0.053);
     
+    --top-1: 43%;
+    --top-2: 40%;
+
+    --left-1: 2%;
+    --left-2: 1.5%;
+
     --width-size-max: 1400px;
     --width-size-max-2: 1296px;
     --height-img-about: 500px;
@@ -73,6 +79,9 @@
     --width-12: 200px;
     --width-13: 400px;
     --width-diference-1: 90px;
+    --width-blog-page: 306px;
+    --height-blog-phone: 340px;
+    --height-img-blog: 200px;
 
     --width-guide-ball: 20px;
     --height-guide-ball: 20px;
@@ -82,6 +91,7 @@
     --hamburguer-height: 2px;
     --width-play: 106px;
     --height-play: 106px;
+    --height-underline: 2px;
 
     --width-img-footer: 150px;
     --height-img-footer: 150px;
@@ -118,6 +128,7 @@
     --padding-20: 5px;
     --padding-21: 10px;
     --padding-22: 20px;
+    --padding-23: 15px;
 
     --margin-1: 20px;
     --margin-2: 150px;
@@ -217,6 +228,8 @@
     --border-radius-2: 15px;
     --border-radius-button: 50px;
     --full-radius: 50%;
+
+    --outline-width-blog-hover: 3px;
 
 
     --big-up: -100000px;

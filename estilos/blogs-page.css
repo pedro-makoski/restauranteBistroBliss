@@ -15,6 +15,10 @@ header > #title {
     padding: var(--padding-section-pc); 
 }
 
+.search-blog label {
+    top: var(--top-1);
+}
+
 .search-blog input:focus + label {
     left: 0;
 }
@@ -23,6 +27,10 @@ header > #title {
     padding: var(--padding-section-pc) 0;
 }
 
+.blog {
+    width: fit-content;
+}
+
 .blog a {
-    width: 306px;
+    width: var(--width-blog-page);
 }
