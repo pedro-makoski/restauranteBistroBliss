@@ -12,7 +12,7 @@
 }
 
 .line-1-blog a {
-    width: fit-content;
+    width: var(--width-14);
     margin-top: 0;
 
 }

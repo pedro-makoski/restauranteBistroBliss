@@ -83,6 +83,7 @@
     --width-blog-page: 306px;
     --height-blog-phone: 370px;
     --height-img-blog: 200px;
+    --width-14: 190px;
 
     --width-guide-ball: 20px;
     --height-guide-ball: 20px;
@@ -334,8 +335,4 @@ div:has(.button-move-scroll):hover .button-move-scroll, section:has(.button-move
     div:has(.button-move-scroll):hover .button-move-scroll, section:has(.button-move-scroll):hover .button-move-scroll {
         display: none;
     }
-}
-
-h1, h2, h3 {
-    width: var(--cem-width);
 }
