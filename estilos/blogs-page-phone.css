@@ -63,6 +63,16 @@ header > #title > div {
     box-shadow: 1px 1px 5px var(--shawdow-color);
     border-radius: var(--border-radius-1);
     padding:var(--padding-23);
+    transition: .2s;
+}
+
+.search-blog input:focus:has(+label) {
+    padding-left: var(--padding-23);
+    transition: .2s;
+}
+
+.search-blog input:has(+label) {
+    padding-left: var(--padding-24);
 }
 
 .search-blog input:focus {

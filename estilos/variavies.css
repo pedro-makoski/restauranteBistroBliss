@@ -30,6 +30,7 @@
 
     --width-size-max: 1400px;
     --width-size-max-2: 1296px;
+    --width-size-max-3: 1087px;
     --height-img-about: 500px;
     --width-img-about: 500px;
     --cem-width:100%;
@@ -80,7 +81,7 @@
     --width-13: 400px;
     --width-diference-1: 90px;
     --width-blog-page: 306px;
-    --height-blog-phone: 340px;
+    --height-blog-phone: 370px;
     --height-img-blog: 200px;
 
     --width-guide-ball: 20px;
@@ -99,6 +100,7 @@
     --major-height-container-img-footer: 200px;
     --width-exit-button: 50px;
     --height-exit-button: 50px;
+    --height-imagem-blog-post: 500px;
 
     --padding-section-pc: 50px;
     --padding-section-pc-video: 90px;
@@ -129,6 +131,10 @@
     --padding-21: 10px;
     --padding-22: 20px;
     --padding-23: 15px;
+    --padding-24: 100px;
+    --padding-25: 15px;
+    --padding-26: 40px;
+    --padding-27: 20px;
 
     --margin-1: 20px;
     --margin-2: 150px;
@@ -149,6 +155,9 @@
     --margin-17: 20px;
     --margin-18: 25px;
     --margin-19: 8px;
+    --margin-20: 30px;
+    --margin-21: 30px;
+    --margin-22: 50px;
 
     --gap-1: 10px;
     --gap-2: 20px;
@@ -192,6 +201,9 @@
     --gap-41: 10px;
     --gap-42: 30px;
     --gap-43: 15px;
+    --gap-44: 20px;
+    --gap-45: 10px;
+    --gap-46: 20px;
 
     --left-section-info: 200px;
     --top-section-info: 290px;
@@ -213,6 +225,7 @@
     --major-h2-size: 3em;
     --p-size: 1.2em;
     --p-size-2: 0.8em;
+    --h2-blog-fontsize: 24px;
     --h3-fontsize: 1.5em;
 
     --grid-size-standart: 1fr;
@@ -321,4 +334,8 @@ div:has(.button-move-scroll):hover .button-move-scroll, section:has(.button-move
     div:has(.button-move-scroll):hover .button-move-scroll, section:has(.button-move-scroll):hover .button-move-scroll {
         display: none;
     }
+}
+
+h1, h2, h3 {
+    width: var(--cem-width);
 }

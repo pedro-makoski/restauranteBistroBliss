@@ -1,0 +1,22 @@
+#conteudo h1, #readmore h1 {
+    font-size: var(--h2-size-pc);
+}
+
+#readmore {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.itens {
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow: visible;
+    width: var(--cem-width);
+    gap: var(--gap-46);  
+}
+
+.blog{
+    margin: 0;
+    flex-shrink: 1;
+}

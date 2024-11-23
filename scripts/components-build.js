@@ -144,15 +144,50 @@ function baixarJson(path, errorFunction) {
     })
 }
 
+function takeOnlySomeElementsRandom(data, actualNotRepeat, actualNotRepeatWhere, quantSlice) {
+    const id = data.indexOf(data.find(elemento => elemento[actualNotRepeatWhere] === actualNotRepeat));
+    const randomPositons = [];
+    let randomValue;
 
-async function mudarLayout(path, textoDeSumico, isInputable, inputElement, isFilter, FilterFunction, stringText, div_components, inputSearchItens) {
-    //fetch(path)
-       // .then(response => response.json())
-       // .then((json) => {
+    for(let i = 0; i < quantSlice; i++) {
+        try {
+            function generateRandomValue() {
+                let value = Math.floor(Math.random() * data.length);
+                if(value === id || randomPositons.includes(value)) {
+                    value = generateRandomValue();
+                }
+    
+                return value;
+            }
+    
+            randomValue = generateRandomValue();
+        } catch(erro) {
+            randomValue = Math.floor(Math.random() * data.length);
+        }
+
+        randomPositons.push(randomValue);
+    }
+
+    let res = [];
+    for(let i = 0; i < randomPositons.length; i++) {
+        res.push(data[randomPositons[i]]);
+    }
+
+    return res; 
+}
+
+async function mudarLayout(path, textoDeSumico, isInputable, inputElement, isFilter, FilterFunction, stringText, div_components, inputSearchItens, isSliced, quantSlice, prefixo, prefixoElement, actualNotRepeat, actualNotRepeatWhere) {
     let canDo = true;
     await baixarJson(path, () => {div_components.innerHTML = textoDeSumico; canDo = false});
     if(canDo) {
         let data = jsons[path];
+        if(isSliced) {
+            if(typeof actualNotRepeat === "undefined") {
+                data = data.slice(0, quantSlice);
+            } else {
+                data = takeOnlySomeElementsRandom(data, actualNotRepeat, actualNotRepeatWhere, quantSlice)
+            }
+        }
 
         if(isInputable) {
             if(input.value !== '') {
@@ -179,11 +214,19 @@ async function mudarLayout(path, textoDeSumico, isInputable, inputElement, isFil
             } 
         }
     
+        if(typeof prefixo !== "undefined" && typeof prefixoElement !== "undefined") {
+            for(let i = 0; i < data.length; i++) {
+                for(let j = 0; j < prefixoElement.length; j++) {
+                    if(typeof data[i][prefixoElement[j]] !== "undefined") {
+                        data[i][prefixoElement[j]] = prefixo+data[i][prefixoElement[j]];
+                    }
+                }
+            }
+        }
+
         if(typeof data === "object") {
             const elementos = new Component(data, stringText);
             div_components.innerHTML = data.length !== 0 ? elementos.createComponents() : textoDeSumico;
         }
     }
-        //})
-        //.catch((error) => {div_components.innerHTML = textoDeSumico});
 }

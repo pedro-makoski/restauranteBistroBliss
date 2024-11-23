@@ -18,8 +18,8 @@
         "imgUrl": "imgs/blog_imgs/3.png"
     },
     {
-        "path": "pages/how-to-prepare-the-perfect-fries-in-an-air-fryer.html",
-        "title": "how to prepare delicious chicken tenders",
+        "path": "pages/how-to-prepare-delicious-chicken-tenders.html",
+        "title": "How to prepare delicious chicken tenders",
         "date": "January 3, 2023",
         "imgUrl": "imgs/blog_imgs/4.png"
     }, 
@@ -54,21 +54,21 @@
         "imgUrl": "imgs/blog_imgs/9.png"
     },
     {
-        "path": "pages/how-to-prepare-a-delicious-gluten-free-sushi.html",
-        "title": "How to prepare a delicious gluten free sushi",
-        "date": "January 3, 2023",
-        "imgUrl": "imgs/blog_imgs/10.png"
-    },
-    {
         "path": "pages/top-20-simple-and-quick-desserts-for-kids.html",
         "title": "Top 20 simple and quick desserts for kids",
         "date": "January 3, 2023",
         "imgUrl": "imgs/blog_imgs/11.png"
     },
     {
-        "path": "pages/top-20-simple-and-quick-desserts-for-kids-2.html",
+        "path": "pages/top-20-simple-and-quick-desserts-for-kids.html",
         "title": "Top 20 simple and quick desserts for kids",
         "date": "January 3, 2023",
         "imgUrl": "imgs/blog_imgs/12.png"
+    },
+    {
+        "path": "pages/the-secret-tips-tricks-to-prepare-a-perfect-burger-pizza-for-our-customers.html",
+        "title": "The secret tips & tricks to prepare a perfect burger & pizza for our customers",
+        "date":"January 3, 2023",
+        "imgUrl": "imgs/blog_headers_mini/hamburguer.jpg"
     }
 ]

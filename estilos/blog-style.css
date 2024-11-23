@@ -1,0 +1,118 @@
+#conteudo{
+    padding: var(--padding-section-pc);
+    background-color: var(--cor-diferenciado-branco);
+}
+
+#conteudo > div {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-44);
+    margin: auto;
+    max-width: var(--width-size-max-3);
+}
+
+
+#conteudo h1 {
+    font-weight: lighter;
+    text-align: center;
+    font-size: var(--h2-size-phone);
+    margin-bottom: var(--margin-20);
+}
+
+#conteudo img{
+    width: var(--cem-width);
+    height: var(--height-imagem-blog-post);
+    object-fit: cover;
+    margin-bottom: var(--margin-21);
+    border-radius: var(--border-radius-1);
+}
+
+#conteudo ol {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-45);
+    list-style-position: outside;
+    padding-left: var(--padding-25);
+}
+
+#conteudo ol li::marker {
+    font-weight: bold;
+}
+
+#conteudo h2 {
+    font-family: var(--fonte-padrao);
+    font-size: var(--h2-blog-fontsize);
+}  
+
+.readmoreintro {
+    padding: var(--padding-section-pc);
+    padding-bottom: 0;
+}
+
+#readmore {
+    text-align: center;
+    padding-bottom: var(--padding-26);
+}
+
+#readmore h1 {
+    font-weight: lighter;
+    text-align: center;
+    font-size: var(--h2-size-phone);
+}
+
+#readmore > div{
+    max-width: var(--width-size-max-2);
+}
+
+.itens {
+    overflow: auto;
+    text-align: left;
+    margin-top: var(--margin-22);
+    display: flex;
+    justify-content: start;
+    padding: var(--padding-27) 0;
+}
+
+.itens::-webkit-scrollbar {
+    display: block;
+}
+
+.blog {
+    flex-shrink: 0;
+    width: var(--width-blog-page);
+    margin: 0 calc(50% - var(--width-blog-page)/2);
+}
+
+.blog a{
+    text-decoration: none;
+    color: var(--cor-contraste);
+    border-radius: var(--border-radius-2);
+    box-shadow: 1px 1px 10px var(--shawdow-color);
+    width: var(--cem-width);
+    height: var(--height-blog-phone);
+    gap: var(--gap-41);
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    overflow: auto;
+    outline: 0 solid var(--cor-destaque);
+    transition: .1s;
+}
+
+.blog a:hover {
+    outline-width: var(--outline-width-blog-hover);
+    transition: .1s;
+}
+
+.blog img {
+    height: var(--height-img-blog);
+    object-fit: cover;
+}
+
+.blog .title {
+    padding: var(--padding-22);
+    display: flex;
+    height: var(--cem-height);
+    flex-direction: column-reverse;
+    justify-content: space-between;
+}
