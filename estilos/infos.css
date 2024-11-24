@@ -3,10 +3,13 @@
 }
 
 #infos .first-side {
+    padding: var(--padding-28);
     width: calc(var(--cem-width) - var(--padding-section-pc));
-    flex-direction: row;
+    flex-wrap: nowrap;
+    min-height: 100%;
+    flex-shrink: 0;
+    flex-direction: column;
     justify-content: space-between;
-    flex-wrap: wrap;
 }
 
 #infos h2 {
@@ -18,8 +21,16 @@
 }
 
 #infos .first-side ul li {
+    overflow: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: calc(var(--width-7) - var(--gap-35)/2);
-    height: calc(var(--mid-height) - var(--gap-35)/2);
+    min-height: calc(var(--mid-height) - var(--gap-35)/2);
+}
+
+.last-side {
+    padding: var(--padding-28);
 }
 
 @media screen and (min-width: 1300px){ 
