@@ -51,10 +51,10 @@
     justify-content: space-between;
 }
 
-
 .contact-inputs form .peopleinfo div {
-    width: calc(var(--mid-width) - var(--padding-30));
+    width: var(--cem-width);
 }
+
 
 .contact-inputs form input, .contact-inputs form textarea{
     font-family: var(--fonte-padrao);

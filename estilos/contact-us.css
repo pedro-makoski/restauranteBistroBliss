@@ -26,6 +26,10 @@
     flex-wrap: wrap;
 }
 
+.contact-inputs form .peopleinfo div {
+    width: calc(var(--mid-width) - var(--padding-30));
+}
+
 .mapacontainer {
     padding-bottom: var(--padding-32);
     position: relative;
