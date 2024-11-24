@@ -45,7 +45,9 @@ class JsonArrFunctions {
                 }
 
                 for(let j = 0; j < atualValues.length; j++) {
-                    if(atualValues[j].toLowerCase().normalize("NFD").replace(/[\u0300-\u836f]/g, "").includes(valueApart.toLowerCase().normalize("NFD").replace(/[\u0300-\u836f]/g, ""))) {
+                    const actualValues = atualValues[j].toLowerCase().normalize("NFD").replace(/[\u0300-\u836f]/g, "");
+                    const inputText = valueApart.toLowerCase().normalize("NFD").replace(/[\u0300-\u836f]/g, "");
+                    if(actualValues.includes(inputText)) {
                         idxs.push(i);
                         j = atualValues.length;
                     }
