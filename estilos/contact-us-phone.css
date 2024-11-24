@@ -55,6 +55,10 @@
     width: var(--cem-width);
 }
 
+.contact-inputs form .peopleinfo div input{
+    width: var(--cem-width);
+}
+
 
 .contact-inputs form input, .contact-inputs form textarea{
     font-family: var(--fonte-padrao);
