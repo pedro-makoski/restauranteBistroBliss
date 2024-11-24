@@ -43,13 +43,15 @@ exit_button.addEventListener('click', () => {
     dissapearVideo(before_video, video, iframe_video)
 })
 
+const HEIGHT_APPEAR_ALL = 3500;
+
 function scrollIncrement(elemento, father, i, time) {
     let elemento_pai_bounding = elements_to_change[i].closest(father).getBoundingClientRect()
 
     let final_value = parseInt(elements_to_change[i].getAttribute("data-final"));
     const start = elements_to_change[i].innerHTML;
     
-    if(!isprimeiro[i] && elemento_pai_bounding.top <= elemento_pai_bounding.height && elemento_pai_bounding.bottom >= 0) {
+    if((!isprimeiro[i] && elemento_pai_bounding.top <= elemento_pai_bounding.height && elemento_pai_bounding.bottom >= 0) || window.innerWidth >= HEIGHT_APPEAR_ALL) {
         isprimeiro[i] = true;
         atualizarElemento(start, final_value, elemento, time);
     }
@@ -57,7 +59,6 @@ function scrollIncrement(elemento, father, i, time) {
 
 const elements_to_change = Array.from(document.querySelectorAll('.change-number'));
 const WINDOW_SIZE = document.querySelector('body').getBoundingClientRect().height;
-const HEIGHT_APPEAR_ALL = 1500;
 
 for(let i = 0; i < elements_to_change.length; i++){
     if(typeof isprimeiro[i] == undefined) {
