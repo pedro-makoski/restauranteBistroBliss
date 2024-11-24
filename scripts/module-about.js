@@ -69,11 +69,11 @@ for(let i = 0; i < elements_to_change.length; i++){
     scrollIncrement(elements_to_change[i], ".container-data-count", i, 10)
  
     window.addEventListener('scroll', () => {
-      scrollIncrement(elements_to_change[i], ".first-side", i, 10);
+      scrollIncrement(elements_to_change[i], ".container-data-count", i, 10);
     })
 
     window.addEventListener('resize', () => {
         elemento_pai_bounding = elements_to_change[i].closest(father).getBoundingClientRect()
-        scrollIncrement(elements_to_change[i], ".first-side", i, 10);
+        scrollIncrement(elements_to_change[i], ".container-data-count", i, 10);
     })
 }
