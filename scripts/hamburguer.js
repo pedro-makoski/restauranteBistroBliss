@@ -1,4 +1,4 @@
-document.addEventListener('click', () => {
-    openIdentify('.hamburguer', 'nav ul')
-    closeIdentify('.exit', '.hamburguer', 'nav ul')
+document.addEventListener('click', (e) => {
+    openIdentify('.hamburguer', 'nav ul', e)
+    closeIdentify('.exit', '.hamburguer', 'nav ul', e)
 })

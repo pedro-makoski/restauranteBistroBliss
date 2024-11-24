@@ -18,13 +18,14 @@ class HamburguerButton {
     }
 }
 
-function openIdentify(hamburguer, local) {
+function openIdentify(hamburguer, local, e) {
     const hamburguer_button = document.querySelector(hamburguer, local);
     const hamburgerButton = new HamburguerButton(local);
+    console.log(e.target.closest("button") === hamburgerButton)
 
-    hamburguer_button.addEventListener('click', (e) => {
+    if(e.target.closest("button") === hamburguer_button) {
         if(window.innerWidth < MAX_WIDTH_WITH_HAMBURGUER) hamburgerButton.open();
-    })
+    }
 
     window.addEventListener('resize', () => {
         if(window.innerWidth >= MAX_WIDTH_WITH_HAMBURGUER) {
@@ -35,15 +36,15 @@ function openIdentify(hamburguer, local) {
     })
 }
 
-function closeIdentify(closeButton, button, local) {
+function closeIdentify(closeButton, button, local, e) {
     const hamburguer_button = document.querySelector(button);
     const close_button = document.querySelector(closeButton);
     const hamburgerButton = new HamburguerButton(local);
-    const menu = document.querySelector(local)
+    const menu = document.querySelector(local);
 
-    close_button.addEventListener('click', () => {
+    if(e.target.closest("button") === close_button) {
         if(window.innerWidth < MAX_WIDTH_WITH_HAMBURGUER) hamburgerButton.close();
-    })
+    }
 
     document.addEventListener('click', (e) => {
         if(e.target != menu && !hamburguer_button.contains(e.target)) {
