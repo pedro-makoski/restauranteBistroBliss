@@ -49,9 +49,9 @@
     --mid-width-more-part: 55%;
     --mid-width-more: 70%;
     --max-width-1: 400px;
-    --height-2: 600px;
+    --height-2: 700px;
     --mid-width-screen: 50vw;
-    --width-blog: 400px;
+    --width-blog: 350px;
     --height-3: 800px;
     --width-menu-item: 300px;
     --width-1: 103px;
@@ -67,7 +67,7 @@
     --width-5: 306px;
     --width-6: 50%;
     --width-7: 50%;
-    --width-whattheysay: 400px;
+    --width-whattheysay: 350px;
     --height-menu: 500px;
     --height-minor-menu: 300px;
     --height-min-video: 600px;
@@ -90,6 +90,7 @@
     --height-extra-about: 500px;
     --width-mid-with-extra-width: 60%;
     --width-form: 597px;
+    --extra: 20px;
 
     --width-guide-ball: 20px;
     --height-guide-ball: 20px;
@@ -223,6 +224,7 @@
     --gap-49: 10px;
     --gap-50: 20px;
     --gap-51: 15px;
+    --gap-52: 10px;
 
     --left-section-info: 200px;
     --top-section-info: 290px;

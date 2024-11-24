@@ -54,7 +54,7 @@
 
 .blogs article {
     margin: 0 calc(var(--mid-width-screen) - var(--width-blog)/2);
-    max-width: 400px;
+    max-width: var(--width-blog);
     height: var(--cem-height);
     flex-shrink: 0;
 }
