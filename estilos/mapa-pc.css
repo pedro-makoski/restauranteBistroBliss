@@ -1,0 +1,15 @@
+.mapacontainer {
+    padding-bottom: var(--padding-32);
+    position: relative;
+}
+
+.mapa {
+    width: var(--cem-width);
+    position: absolute;
+    z-index: 800;
+    top: var(--top-mapa);
+}
+
+.mapa iframe {
+    width: var(--cem-width);
+}

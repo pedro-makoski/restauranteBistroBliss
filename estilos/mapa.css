@@ -1,0 +1,10 @@
+.mapacontainer {
+    padding: 0;
+}
+
+.mapa {
+    position: static;
+    left: 0;
+    top: 0;
+}
+

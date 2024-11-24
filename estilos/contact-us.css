@@ -1,0 +1,43 @@
+.contact-inputs:after {
+    content: "";
+    background-color: var(--cor-contraste-do-contraste);
+    width: var(--cem-width);
+    height: var(--mid-height-less-part-2);
+    position: absolute; 
+    top: 100%;
+    transform: translateY(-95%);
+    left: 0;
+}
+
+.contact-inputs h2 {
+    font-size: var(--h2-size-pc-especial);
+
+}
+
+.contact-inputs p {
+    width: var(--width-mid-with-extra-width);
+}
+
+.contact-inputs form {
+    width: var(--width-form);
+}
+
+.contact-inputs form .peopleinfo {
+    flex-wrap: wrap;
+}
+
+.mapacontainer {
+    padding-bottom: var(--padding-32);
+    position: relative;
+}
+
+.mapa {
+    width: var(--cem-width);
+    position: absolute;
+    z-index: 800;
+    top: var(--top-mapa);
+}
+
+.mapa iframe {
+    width: var(--cem-width);
+}

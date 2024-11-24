@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="estilos/footer.css" media="(min-width: 950px)">
     <link rel="stylesheet" href="estilos/contact-us-phone.css">
     <link rel="stylesheet" href="estilos/contact-us.css" media="(min-width: 950px)">
+    <link rel="stylesheet" href="estilos/mapa.css">
+    <link rel="stylesheet" href="estilos/mapa-pc.css" media="(min-width: 950px)">
 </head>
 <body>
    <header>
@@ -79,7 +81,7 @@
                         <li><a href="about.html" target="_self" rel="next">About</a></li>
                         <li><a href="menu.html" target="_self" rel="next">Menu</a></li>
                         <li><a href="blog.html" target="_self" rel="next">Pages</a></li>
-                        <li><a href="contact.html" target="_self" rel="next" class="actual">Contact</a></li>
+                        <li><a href="contact.html" target="_self" rel="next">Contact</a></li>
                     </div>
                     <li><a href="book.html" rel="next" target="_self" class="book">Book a Table</a></li>
                 </ul>
@@ -90,49 +92,40 @@
         <section class="contact-inputs">
             <div>
                 <div>
-                    <h2>Contact Us</h2>
+                    <h2>Book a Table</h2>
                     <p>We consider all the drivers of change gives you the components you need to change to create a truly happens.</p>
                 </div>
                 <form action="send.html" method="post" autocomplete="on">
                     <div class="peopleinfo">
                         <div>
-                            <label for="name">Name</label>
-                            <input type="text" id="name" name="name" autocomplete="name" placeholder="Enter your name" required>
+                            <label for="date">Date</label>
+                            <input type="date" id="date" name="date" required>
                         </div>
                         <div>
-                            <label for="mail">E-mail</label>
-                            <input type="email" id="email" name="email" autocomplete="email" placeholder="Enter email adress" required>
+                            <label for="time">Time</label>
+                            <input type="time" id="time" name="time" required>
+                        </div>
+                        <div>
+                            <label for="name">Name</label>
+                            <input type="text" id="subject" name="name" autocomplete="name" placeholder="Enter your name" required>
+                        </div>
+                        <div>
+                            <label for="phone">Phone</label>
+                            <input type="text" placeholder="x-xxx-xxx-xxxx" name="phone" id="phone" autocomplete="phone" required maxlength="14">
                         </div>
                     </div>
                     <div>
-                        <label for="subject">Subject</label>
-                        <input type="text" id="subject" name="subject" autocomplete="off" placeholder="Write a subject" required>
+                        <label for="total-person">Total person</label>
+                        <input type="number" name="total-person" id="total-person" max="32" required>
                     </div>
                     <div>
-                        <label for="message">Message</label>
-                        <textarea name="message" id="message" placeholder="Write a message" required></textarea>
-                    </div>
-                    <div>
-                        <input type="submit" value="Send" aria-label="Send the informations">
+                        <input type="submit" value="Book a table" aria-label="Send the informations">
                     </div>
                 </form>
             </div>
         </section>
-        <section class="infos">
-            <div>
-                <article>
-                    <h3>Call Us</h3>
-                    <p><strong>+1-234-567-8900</strong></p>
-                </article>
-                <article>
-                    <h3>Hours</h3>
-                    <p>Mon-Fri: 11am - 8pm<br>Sat, Sun: 9am - 10pm</p>
-                </article>
-                <article>
-                    <h3>Our Location</h3>
-                    <p>123 Bridge Street<br>Nowhere Land, LA 12345<br>United States</p>
-                </article>
-            </div>
+        <section class="mapacontainer">
+            <div class="mapa"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3607.403817039572!2d-49.22516131985921!3d-25.290633320025336!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94dcdd001e85a7f7%3A0x6fc7176acc9f78b2!2sBosque%20da%20uva!5e0!3m2!1spt-BR!2sbr!4v1732466527474!5m2!1spt-BR!2sbr" width="600" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
         </section>
    </main>
    <footer>

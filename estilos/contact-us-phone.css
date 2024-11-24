@@ -1,0 +1,118 @@
+.contact-inputs {
+    position: relative;
+    padding: var(--padding-section-pc);
+    background-color: var(--cor-diferenciado-branco);
+}
+
+.contact-inputs > div {
+    max-width: var(--width-size-max);
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--gap-48);
+}
+
+.contact-inputs h2 {
+    text-align: center;
+    font-size: var(--h2-size-pc);
+    font-weight: lighter;
+}
+
+.contact-inputs p {
+    width: var(--cem-width);
+    text-align: center;
+    margin: auto;
+}
+
+.contact-inputs form {
+    flex-shrink: 0;
+    position: relative;
+    z-index: 888;
+    width: var(--cem-width);
+    background-color: var(--cor-contraste-do-contraste);
+    padding: var(--padding-29);
+    border-radius: var(--border-radius-2);
+    box-shadow: 1px 1px 5px var(--shawdow-color);
+}
+
+.contact-inputs form div:has(label) {
+    width: var(--cem-width);
+    margin-bottom: var(--margin-23);
+    gap: var(--gap-49);
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-inputs form .peopleinfo {
+    width: var(--cem-width);
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+.contact-inputs form .peopleinfo div {
+    width: calc(var(--mid-width) - var(--padding-30));
+}
+
+.contact-inputs form input, .contact-inputs form textarea{
+    font-family: var(--fonte-padrao);
+    border: var(--border-width-2) solid var(--cor-semi-preto);
+    padding: var(--padding-30);
+    border-radius: var(--border-radius-button);
+}
+
+.contact-inputs form textarea {
+    width: var(--cem-width);
+    border-radius: var(--border-radius-1);
+    resize: none;
+    height: var(--height-textarea);
+}
+
+.contact-inputs form input:focus, .contact-inputs form textarea:focus{
+    outline: none;
+    border-color: var(--cor-destaque);
+}
+
+.contact-inputs form label{
+    font-size: var(--size-label);
+    font-weight: bold;
+}
+
+.contact-inputs form input[type="submit"] {
+    font-weight: bold;
+    width: var(--cem-width);
+    background-color: var(--cor-destaque);
+    color: var(--cor-contraste-do-contraste);
+    padding: var(--padding-31);
+    border:none;
+}
+
+.contact-inputs form input[type="submit"]:hover {
+    background-color: var(--cor-destaque-claro);
+}
+
+.infos {
+    padding: var(--padding-section-pc);
+}
+
+.infos > div {
+    max-width: var(--width-form);
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: var(--gap-51);
+}
+
+.infos > div > article {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-50);
+}
+
+.infos > div > article  strong {
+    color: var(--cor-destaque);
+}
