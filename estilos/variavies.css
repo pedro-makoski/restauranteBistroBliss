@@ -113,7 +113,7 @@
 
     --padding-section-pc: 50px;
     --padding-section-pc-video: 90px;
-    --padding-bottom-1: 50px;
+    --padding-bottom-1: 50px 30px 50px 30px;
     --padding-section-phone: 35px;
     --padding-section-phone-minor: 20px;
     --padding-section-phone2: 25px;
@@ -173,9 +173,10 @@
     --margin-21: 30px;
     --margin-22: 50px;
     --margin-23: 10px;
+    --margin-24: 50px;
 
     --gap-1: 10px;
-    --gap-2: 20px;
+    --gap-2: 10px;
     --gap-3: 20px;
     --gap-4: 15px;
     --gap-5: 20px;

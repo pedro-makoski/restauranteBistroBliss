@@ -23,6 +23,7 @@
     flex-wrap: wrap;
     position: relative;
     padding-bottom: var(--padding-bottom-1);
+    margin-bottom: var(--margin-24);
 }
 
 #about img {
