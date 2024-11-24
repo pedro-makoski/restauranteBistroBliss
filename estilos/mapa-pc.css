@@ -9,7 +9,3 @@
     z-index: 800;
     top: var(--top-mapa);
 }
-
-.mapa iframe {
-    width: var(--cem-width);
-}
