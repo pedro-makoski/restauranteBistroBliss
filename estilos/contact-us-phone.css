@@ -93,7 +93,7 @@
     border:none;
 }
 
-.contact-inputs form input[type="submit"]:hover {
+.contact-inputs form input[type="submit"]:hover, .contact-inputs form input[type="submit"]:focus{
     background-color: var(--cor-destaque-claro);
 }
 
