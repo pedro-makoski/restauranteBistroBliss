@@ -116,3 +116,8 @@
     flex-direction: column-reverse;
     justify-content: space-between;
 }
+
+.blog h2 {
+    font-family: var(--fonte-padrao);
+    font-size: var(--h3-fontsize-2);
+}
