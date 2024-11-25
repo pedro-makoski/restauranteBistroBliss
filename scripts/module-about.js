@@ -57,6 +57,9 @@ function scrollIncrement(elemento, father, i, time) {
     }
 }
 
+
+const ELEMENT_FATHER_SCROLL = ".container-data-count";
+const TIME_DELAY = 10; 
 const elements_to_change = Array.from(document.querySelectorAll('.change-number'));
 const WINDOW_SIZE = document.querySelector('body').getBoundingClientRect().height;
 
@@ -66,14 +69,13 @@ for(let i = 0; i < elements_to_change.length; i++){
     }
 
 
-    scrollIncrement(elements_to_change[i], ".container-data-count", i, 10)
+    scrollIncrement(elements_to_change[i], ELEMENT_FATHER_SCROLL, i, TIME_DELAY)
  
     window.addEventListener('scroll', () => {
-      scrollIncrement(elements_to_change[i], ".container-data-count", i, 10);
+      scrollIncrement(elements_to_change[i], ELEMENT_FATHER_SCROLL, i, TIME_DELAY);
     })
 
     window.addEventListener('resize', () => {
-        elemento_pai_bounding = elements_to_change[i].closest(father).getBoundingClientRect()
-        scrollIncrement(elements_to_change[i], ".container-data-count", i, 10);
+        scrollIncrement(elements_to_change[i], ELEMENT_FATHER_SCROLL, i, TIME_DELAY);
     })
 }
