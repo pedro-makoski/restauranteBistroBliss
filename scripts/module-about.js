@@ -45,13 +45,15 @@ exit_button.addEventListener('click', () => {
 
 const HEIGHT_APPEAR_ALL = 3500;
 
-function scrollIncrement(elemento, father, i, time) {
+function scrollIncrement(elemento, father, i, time, taxaDeAparicaoDoFather) {
+    const diferencade100PorcentoMenosTaxaDeAparicaoDoFather = 1-taxaDeAparicaoDoFather;
     let elemento_pai_bounding = elements_to_change[i].closest(father).getBoundingClientRect()
 
     let final_value = parseInt(elements_to_change[i].getAttribute("data-final"));
     const start = elements_to_change[i].innerHTML;
+    console.log(diferencade100PorcentoMenosTaxaDeAparicaoDoFather)
     
-    if((!isprimeiro[i] && elemento_pai_bounding.top <= elemento_pai_bounding.height && elemento_pai_bounding.bottom >= 0) || window.innerWidth >= HEIGHT_APPEAR_ALL) {
+    if((!isprimeiro[i] && elemento_pai_bounding.top <= window.innerHeight*diferencade100PorcentoMenosTaxaDeAparicaoDoFather && elemento_pai_bounding.bottom >= 0) || window.innerWidth >= HEIGHT_APPEAR_ALL) {
         isprimeiro[i] = true;
         atualizarElemento(start, final_value, elemento, time);
     }
@@ -62,20 +64,21 @@ const ELEMENT_FATHER_SCROLL = ".container-data-count";
 const TIME_DELAY = 10; 
 const elements_to_change = Array.from(document.querySelectorAll('.change-number'));
 const WINDOW_SIZE = document.querySelector('body').getBoundingClientRect().height;
+const TAXA_DE_APARICAO_DO_FATHER = 0.15;
 
 for(let i = 0; i < elements_to_change.length; i++){
-    if(typeof isprimeiro[i] == undefined) {
+    if(typeof isprimeiro[i] === "undefined") {
         isprimeiro[i] = false;
     }
 
 
-    scrollIncrement(elements_to_change[i], ELEMENT_FATHER_SCROLL, i, TIME_DELAY)
+    scrollIncrement(elements_to_change[i], ELEMENT_FATHER_SCROLL, i, TIME_DELAY, TAXA_DE_APARICAO_DO_FATHER)
  
     window.addEventListener('scroll', () => {
-      scrollIncrement(elements_to_change[i], ELEMENT_FATHER_SCROLL, i, TIME_DELAY);
+      scrollIncrement(elements_to_change[i], ELEMENT_FATHER_SCROLL, i, TIME_DELAY, TAXA_DE_APARICAO_DO_FATHER);
     })
 
     window.addEventListener('resize', () => {
-        scrollIncrement(elements_to_change[i], ELEMENT_FATHER_SCROLL, i, TIME_DELAY);
+        scrollIncrement(elements_to_change[i], ELEMENT_FATHER_SCROLL, i, TIME_DELAY, TAXA_DE_APARICAO_DO_FATHER);
     })
 }
