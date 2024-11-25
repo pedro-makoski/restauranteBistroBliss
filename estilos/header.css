@@ -21,7 +21,7 @@ nav {
 }
 
 nav ul {
-    width: var(--mid-width-more);
+    max-width: var(--mid-width-more);
     border: none;
     position: static;
     left: 0;

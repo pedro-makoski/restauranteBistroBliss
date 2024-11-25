@@ -16,7 +16,7 @@
 
 .contact-with-image {
     display: flex;
-    width: calc(var(--cem-width) - var(--extra));
+    max-width: calc(var(--cem-width) - var(--extra));
     margin: auto;
     gap: var(--gap-52);
     height: fit-content;

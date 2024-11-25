@@ -60,6 +60,7 @@ nav {
 }
 
 nav ul {
+    max-width: var(--width-hamburguer);
     max-height: var(--height-menu);
     overflow: auto;
     z-index: 999;

@@ -1,6 +1,6 @@
 .contact-inputs {
     position: relative;
-    padding: var(--padding-section-pc);
+    padding: var(--padding-section-phone-minor);
     background-color: var(--cor-diferenciado-branco);
 }
 
