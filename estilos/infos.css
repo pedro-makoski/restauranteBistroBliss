@@ -3,7 +3,6 @@
 }
 
 #infos .first-side {
-    padding: var(--padding-28);
     width: calc(var(--cem-width) - var(--padding-section-pc));
     flex-wrap: nowrap;
     min-height: 100%;

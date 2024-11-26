@@ -12,6 +12,7 @@
 
 
 #infos .first-side {
+    padding: var(--padding-28);
     width: var(--cem-width);
     display: flex;
     flex-wrap: wrap;
