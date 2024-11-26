@@ -47,7 +47,8 @@
     display: flex;
     flex-wrap: wrap;
     padding: var(--padding-15);
-    width: calc(50% - var(--gap-35)/2);
+    width: 100%;
+    min-width: calc(50% - var(--gap-35)/2);
     height: auto;
     border: var(--border-width-1) solid var(--border-color);
     border-radius: var(--border-radius-1);
