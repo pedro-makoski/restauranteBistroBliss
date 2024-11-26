@@ -54,7 +54,7 @@ class JsonArrFunctions {
                 }
             }
         } else {
-            idxs = 0;
+            idxs = [];
         }
 
         return idxs;
@@ -111,13 +111,9 @@ class Component {
 
     createComponents() {
         this.res = '';
-
-        if(this.json === 0) {
-           this.res = TEXTO_DE_SUMICO;
-        } else {
-            for(let i = 0; i < this.json.length; i++) {
-                this.res += this.substituir(this.json[i]);
-            }
+        
+        for(let i = 0; i < this.json.length; i++) {
+            this.res += this.substituir(this.json[i]);
         }
 
         return this.res;
@@ -180,9 +176,8 @@ function takeOnlySomeElementsRandom(data, actualNotRepeat, actualNotRepeatWhere,
 
 async function mudarLayout(path, textoDeSumico, isInputable, inputElement, isFilter, FilterFunction, stringText, div_components, inputSearchItens, isSliced, quantSlice, prefixo, prefixoElement, actualNotRepeat, actualNotRepeatWhere) {
     let canDo = true;
-    await baixarJson(path, () => {div_components.innerHTML = textoDeSumico; canDo = false});
+    let data = await baixarJson(path, () => {div_components.innerHTML = textoDeSumico; canDo = false});
     if(canDo) {
-        let data = jsons[path];
         if(isSliced) {
             if(typeof actualNotRepeat === "undefined") {
                 data = data.slice(0, quantSlice);
