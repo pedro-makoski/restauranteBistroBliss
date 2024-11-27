@@ -60,6 +60,7 @@ nav {
 }
 
 nav ul {
+    width: var(--quase-width-full-screen);
     max-width: var(--width-hamburguer);
     max-height: var(--height-menu);
     overflow: auto;
@@ -122,8 +123,7 @@ nav ul::-webkit-scrollbar {
 }
 
 nav ul a, .exit button, nav ul .book{
-    width: var(--quase-quase-width-full-screen-2);
-    max-width: var(--quase-quase-width-full-screen);
+    width: var(--cem-width);
     text-decoration: none;
     text-align: center;
     color: var(--cor-contraste);
