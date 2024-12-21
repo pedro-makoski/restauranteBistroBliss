@@ -13,7 +13,9 @@ function dissapearVideo(container_to_disapear, video, iframe) {
     iframe.src = iframe_video.src.slice(0, configs_video.length);
 }
 
-async function atualizarElemento(valorinicial, valorfinal, elemento, time) {
+async function atualizarElemento(valorinicial, valorfinal, elemento, time) 
+{
+    elemento.innerHTML = valorfinal;
     let valoratual = valorinicial;
 
     requestAnimationFrame(atualizarValor);
