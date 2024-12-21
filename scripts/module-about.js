@@ -15,7 +15,6 @@ function dissapearVideo(container_to_disapear, video, iframe) {
 
 async function atualizarElemento(valorinicial, valorfinal, elemento, time) 
 {
-    elemento.innerHTML = valorfinal;
     let valoratual = valorinicial;
 
     requestAnimationFrame(atualizarValor);
