@@ -21,7 +21,6 @@ class HamburguerButton {
 function openIdentify(hamburguer, local, e) {
     const hamburguer_button = document.querySelector(hamburguer, local);
     const hamburgerButton = new HamburguerButton(local);
-    console.log(e.target.closest("button") === hamburgerButton)
 
     if(e.target.closest("button") === hamburguer_button) {
         if(window.innerWidth < MAX_WIDTH_WITH_HAMBURGUER) hamburgerButton.open();
