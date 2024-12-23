@@ -15,6 +15,7 @@ function dissapearVideo(container_to_disapear, video, iframe) {
 
 async function atualizarElemento(valorinicial, valorfinal, elemento, time) 
 {
+    console.log(valorinicial, valorfinal)
     let valoratual = valorinicial;
 
     requestAnimationFrame(atualizarValor);
@@ -46,17 +47,13 @@ exit_button.addEventListener('click', () => {
 
 const HEIGHT_APPEAR_ALL = 3500;
 
-function scrollIncrement(elemento, father, i, time, taxaDeAparicaoDoFather) {
+function scrollIncrement(elemento, father, i, time, taxaDeAparicaoDoFather, startValue, final_value) {
     const diferencade100PorcentoMenosTaxaDeAparicaoDoFather = 1-taxaDeAparicaoDoFather;
     let elemento_pai_bounding = elements_to_change[i].closest(father).getBoundingClientRect()
-
-    let final_value = parseInt(elements_to_change[i].getAttribute("data-final"));
-    const start = elements_to_change[i].innerHTML;
-    console.log(diferencade100PorcentoMenosTaxaDeAparicaoDoFather)
     
     if((!isprimeiro[i] && elemento_pai_bounding.top <= window.innerHeight*diferencade100PorcentoMenosTaxaDeAparicaoDoFather && elemento_pai_bounding.bottom >= 0) || window.innerWidth >= HEIGHT_APPEAR_ALL) {
         isprimeiro[i] = true;
-        atualizarElemento(start, final_value, elemento, time);
+        atualizarElemento(startValue, final_value, elemento, time);
     }
 }
 
@@ -72,14 +69,17 @@ for(let i = 0; i < elements_to_change.length; i++){
         isprimeiro[i] = false;
     }
 
+    let final_value = parseInt(elements_to_change[i].innerHTML);
+    let start_value = parseInt(elements_to_change[i].getAttribute("data-start"));
+    elements_to_change[i].innerHTML = start_value;  
 
-    scrollIncrement(elements_to_change[i], ELEMENT_FATHER_SCROLL, i, TIME_DELAY, TAXA_DE_APARICAO_DO_FATHER)
+    scrollIncrement(elements_to_change[i], ELEMENT_FATHER_SCROLL, i, TIME_DELAY, TAXA_DE_APARICAO_DO_FATHER, start_value, final_value)
  
     window.addEventListener('scroll', () => {
-      scrollIncrement(elements_to_change[i], ELEMENT_FATHER_SCROLL, i, TIME_DELAY, TAXA_DE_APARICAO_DO_FATHER);
+      scrollIncrement(elements_to_change[i], ELEMENT_FATHER_SCROLL, i, TIME_DELAY, TAXA_DE_APARICAO_DO_FATHER, start_value, final_value);
     })
 
     window.addEventListener('resize', () => {
-        scrollIncrement(elements_to_change[i], ELEMENT_FATHER_SCROLL, i, TIME_DELAY, TAXA_DE_APARICAO_DO_FATHER);
+        scrollIncrement(elements_to_change[i], ELEMENT_FATHER_SCROLL, i, TIME_DELAY, TAXA_DE_APARICAO_DO_FATHER, start_value, final_value);
     })
 }
