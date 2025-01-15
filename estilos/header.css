@@ -46,7 +46,7 @@ nav ul {
 
 nav ul .hubs a {
     padding: var(--padding-12);
-    width: var(--width-3);
+    min-width: var(--width-3);
 }
 
 nav ul .book {
