@@ -109,6 +109,10 @@ header > #title > div {
     transition: .1s;
 }
 
+.blog a::-webkit-scrollbar {
+    display: none;
+}
+
 .blog a:hover {
     outline-width: var(--outline-width-blog-hover);
     transition: .1s;
